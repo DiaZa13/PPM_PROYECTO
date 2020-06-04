@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FoodForMe</string>
+    <string name="NewAccount">¿No tienes una cuenta?</string>
 </resources>

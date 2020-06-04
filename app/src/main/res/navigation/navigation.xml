@@ -10,6 +10,15 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.foodforme.login.loginFragment"
-        android:label="login_fragment"
-        tools:layout="@layout/login_fragment" />
+        android:label="FOOD FOR ME"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_newAccountFragment"
+            app:destination="@id/newAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newAccountFragment"
+        android:name="com.example.foodforme.newAccount.newAccountFragment"
+        android:label="FOOD FOR ME"
+        tools:layout="@layout/new_account_fragment" />
 </navigation>
