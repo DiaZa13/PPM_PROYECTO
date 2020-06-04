@@ -16,13 +16,13 @@ class NewAccountViewModel(val database: UserDatabaseDao): ViewModel() {
     private val viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    fun insertGuest(user: Any) {
+    fun insertGuest() {
         uiScope.launch {
-            insert(user as User)
+            insert()
         }
     }
 
-    private suspend fun insert(user: User){
+    private suspend fun insert(){
         withContext(Dispatchers.IO) {
             database.insert(User(name = name.value?:"", user = userv.value?:"",email = email.value?:"", password = password.value?: ""))
         }
