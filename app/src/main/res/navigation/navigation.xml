@@ -15,10 +15,18 @@
         <action
             android:id="@+id/action_loginFragment_to_newAccountFragment"
             app:destination="@id/newAccountFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_userPreferencesFragment"
+            app:destination="@id/userPreferencesFragment" />
     </fragment>
     <fragment
         android:id="@+id/newAccountFragment"
         android:name="com.example.foodforme.newAccount.newAccountFragment"
         android:label="FOOD FOR ME"
         tools:layout="@layout/new_account_fragment" />
+    <fragment
+        android:id="@+id/userPreferencesFragment"
+        android:name="com.example.foodforme.user_preferences.userPreferencesFragment"
+        android:label="user_preferences_fragment"
+        tools:layout="@layout/user_preferences_fragment" />
 </navigation>

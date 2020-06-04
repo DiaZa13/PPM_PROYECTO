@@ -19,6 +19,7 @@ class newAccountFragment : Fragment() {
     }
 
     private lateinit var viewModel: NewAccountViewModel
+    private lateinit var viewModelFactory: NewAccountViewModelFactory
     private lateinit var binding: NewAccountFragmentBinding
 
     override fun onCreateView(

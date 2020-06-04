@@ -5,7 +5,9 @@
     tools:context=".newAccount.newAccountFragment">
 
     <data>
-
+    <variable
+        name="viewModel"
+        type="com.example.foodforme.newAccount.NewAccountViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,6 +45,7 @@
             android:ems="10"
             android:fontFamily="@font/advent_pro"
             android:hint="Contraseña"
+            android:text="@={viewModel.password}"
             android:inputType="textPersonName|textPassword"
             android:textColor="#020202"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +76,7 @@
             android:ems="10"
             android:fontFamily="@font/advent_pro"
             android:hint="Correo electrónico"
+            android:text="@={viewModel.email}"
             android:inputType="textEmailAddress"
             android:textColor="#020202"
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +107,7 @@
             android:ems="10"
             android:fontFamily="@font/advent_pro"
             android:hint="Usuario"
+            android:text="@={viewModel.userv}"
             android:inputType="textPersonName"
             android:textColor="#020202"
             app:layout_constraintEnd_toEndOf="parent"
@@ -145,6 +150,7 @@
             android:fontFamily="@font/advent_pro"
             android:hint="Nombre"
             android:inputType="textPersonName"
+            android:text="@={viewModel.name}"
             android:textColor="#020202"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

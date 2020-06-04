@@ -5,7 +5,9 @@
     tools:context=".login.loginFragment">
 
     <data>
-
+    <variable
+        name="viewModel"
+        type="com.example.foodforme.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,6 +26,7 @@
             android:fontFamily="@font/advent_pro"
             android:hint="Usuario"
             android:inputType="textPersonName"
+            android:text="@={viewModel.user}"
             android:textColor="#050505"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.195"
@@ -39,6 +42,7 @@
             android:fontFamily="@font/advent_pro"
             android:hint="Contraseña"
             android:inputType="textPassword"
+            android:text="@={viewModel.password}"
             android:textColor="#050505"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.22"
@@ -82,7 +86,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txtNewaccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"

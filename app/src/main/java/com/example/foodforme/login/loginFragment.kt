@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 
 import com.example.foodforme.R
 import com.example.foodforme.databinding.LoginFragmentBinding
@@ -19,6 +21,7 @@ class loginFragment : Fragment() {
     }
 
     private lateinit var viewModel: LoginViewModel
+    private lateinit var viewModelFactory: LoginViewModelFactory
     private lateinit var binding: LoginFragmentBinding
 
     override fun onCreateView(
@@ -27,6 +30,9 @@ class loginFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false)
 
+        binding.txtNewaccount.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_loginFragment_to_newAccountFragment)
+        }
         return binding.root
     }
 
