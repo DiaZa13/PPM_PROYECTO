@@ -5,97 +5,111 @@
     tools:context=".login.loginFragment">
 
     <data>
-    <variable
-        name="viewModel"
-        type="com.example.foodforme.login.LoginViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.example.foodforme.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ConstraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center_vertical|center">
+        android:layout_height="match_parent">
 
 
         <EditText
             android:id="@+id/txtUser"
-            android:layout_width="257dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="220dp"
-            android:ems="10"
-            android:fontFamily="@font/advent_pro"
+            style="@style/NormalText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
             android:hint="Usuario"
             android:inputType="textPersonName"
             android:text="@={viewModel.user}"
-            android:textColor="#050505"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.195"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/person_img"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
 
         <EditText
             android:id="@+id/txtPassword"
-            android:layout_width="257dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="46dp"
-            android:ems="10"
-            android:fontFamily="@font/advent_pro"
+            style="@style/NormalText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
             android:hint="Contraseña"
             android:inputType="textPassword"
             android:text="@={viewModel.password}"
-            android:textColor="#050505"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.22"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/key_img"
             app:layout_constraintTop_toBottomOf="@+id/txtUser" />
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="66dp"
-            android:layout_height="71dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="208dp"
-            android:src="@mipmap/image"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="64dp"
+            android:id="@+id/person_img"
+            android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="28dp"
-            android:src="@mipmap/image1"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/image"
+            app:layout_constraintBottom_toBottomOf="@+id/txtUser"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toStartOf="@+id/txtUser"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toTopOf="@+id/txtUser" />
+
+        <ImageView
+            android:id="@+id/key_img"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/image1"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPassword"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toStartOf="@+id/txtPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtPassword" />
 
         <Button
             android:id="@+id/btnStart"
+            style="@style/RedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="432dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/amaranth"
-            android:text="Iniciar Sesión"
-            android:textColor="#0B0A0A"
-            android:textSize="18sp"
+            android:text="@string/log_in"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
         <TextView
             android:id="@+id/txtNewaccount"
+            style="@style/NormalText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
-            android:fontFamily="@font/advent_pro"
             android:text="@string/NewAccount"
-            android:textColor="#0C0C0C"
-            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            android:scaleType="centerInside"
+            android:src="@mipmap/logo_white"
+            app:layout_constraintDimensionRatio="5:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

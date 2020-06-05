@@ -2,4 +2,5 @@
     <string name="app_name">FoodForMe</string>
     <string name="NewAccount">¿No tienes una cuenta?</string>
     <string name="TeGustaria">¿Te gustaría que tu restaurante aparezca en \nFOOD FOR ME?</string>
+    <string name="log_in"> Iniciar Sesión </string>
 </resources>
