@@ -15,6 +15,13 @@
         <item name="android:textColor">#0C0C0C</item>
     </style>
 
+    <style name="SubtitleText">
+        <item name="fontFamily">@font/advent_pro</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#0C0C0C</item>
+    </style>
+
     <style name="NormalText">
         <item name="fontFamily">@font/advent_pro</item>
         <item name="android:textSize">18sp</item>
