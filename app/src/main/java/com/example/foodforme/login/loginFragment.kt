@@ -6,13 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 
 import com.example.foodforme.R
+import com.example.foodforme.database.UserDatabase
 import com.example.foodforme.databinding.LoginFragmentBinding
+import com.example.foodforme.newAccount.NewAccountViewModel
+import com.example.foodforme.newAccount.NewAccountViewModelFactory
 
 class loginFragment : Fragment() {
 
@@ -33,13 +38,30 @@ class loginFragment : Fragment() {
         binding.txtNewaccount.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_loginFragment_to_newAccountFragment)
         }
+        val userInput = binding.txtUser.toString()
+        binding.btnStart.setOnClickListener {
+            viewModel.verifiedUser(userInput)
+            viewModel.isUser.observe(viewLifecycleOwner, Observer {
+                if (it) {
+                    view?.findNavController()?.navigate(R.id.action_loginFragment_to_userPreferencesFragment)
+                }
+                else{
+                    Toast.makeText(activity, "Usuario y/o contraseña incorrecto", Toast.LENGTH_SHORT).show()
+                }
+            })
+        }
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        val application = requireNotNull(this.activity).application
+        val dataSource = UserDatabase.getInstance(application).UserDatabaseDao
+        viewModelFactory = LoginViewModelFactory(dataSource)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(LoginViewModel::class.java)
         // TODO: Use the ViewModel
+
+        binding.viewModel = viewModel
     }
 
 }

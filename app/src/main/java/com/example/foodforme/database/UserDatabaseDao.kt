@@ -15,6 +15,6 @@ interface UserDatabaseDao {
     fun insert(user: User)
 
     @Query("SELECT * FROM user_table WHERE user = :userInput")
-    fun getUser(userInput: String): LiveData<User>
+    fun getUser(userInput: String): User?
 
 }
