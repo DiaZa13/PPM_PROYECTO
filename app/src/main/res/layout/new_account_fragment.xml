@@ -5,9 +5,10 @@
     tools:context=".newAccount.newAccountFragment">
 
     <data>
-    <variable
-        name="viewModel"
-        type="com.example.foodforme.newAccount.NewAccountViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.example.foodforme.newAccount.NewAccountViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,187 +19,166 @@
 
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/contactanos_txt"
+            style="@style/ClickableText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="664dp"
-            android:fontFamily="@font/advent_pro"
-            android:gravity="center"
-            android:text="Contáctanos"
-            android:textColor="#031161"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:text="@string/contactanos"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/txtPassword"
-            android:layout_width="wrap_content"
+            style="@style/NormalText"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginRight="68dp"
-            android:ems="10"
-            android:fontFamily="@font/advent_pro"
-            android:hint="Contraseña"
-            android:text="@={viewModel.password}"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:hint="@string/password"
             android:inputType="textPersonName|textPassword"
-            android:textColor="#020202"
+            android:text="@={viewModel.password}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintStart_toEndOf="@+id/password_img"
             app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/password_img"
             android:layout_width="50dp"
             android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="36dp"
-            android:src="@mipmap/image4"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:src="@mipmap/ic_lock"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPassword"
+            app:layout_constraintEnd_toStartOf="@+id/txtPassword"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintTop_toTopOf="@+id/txtPassword" />
 
         <EditText
             android:id="@+id/txtEmail"
-            android:layout_width="wrap_content"
+            style="@style/NormalText"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginRight="68dp"
-            android:ems="10"
-            android:fontFamily="@font/advent_pro"
-            android:hint="Correo electrónico"
-            android:text="@={viewModel.email}"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:hint="@string/mail"
             android:inputType="textEmailAddress"
-            android:textColor="#020202"
+            android:text="@={viewModel.email}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/mail_img"
             app:layout_constraintTop_toBottomOf="@+id/txtUser" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/mail_img"
             android:layout_width="50dp"
             android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="36dp"
-            android:src="@mipmap/image3"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:src="@mipmap/ic_mail"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
+            app:layout_constraintEnd_toStartOf="@+id/txtEmail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+            app:layout_constraintTop_toTopOf="@+id/txtEmail" />
 
         <EditText
             android:id="@+id/txtUser"
-            android:layout_width="wrap_content"
+            style="@style/NormalText"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="28dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginRight="68dp"
-            android:ems="10"
-            android:fontFamily="@font/advent_pro"
-            android:hint="Usuario"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:hint="@string/user"
             android:inputType="textPersonName"
             android:text="@={viewModel.userv}"
-            android:textColor="#020202"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/user_img"
             app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/user_img"
             android:layout_width="50dp"
             android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="36dp"
-            android:src="@mipmap/image"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:src="@mipmap/ic_silhouette"
+            app:layout_constraintBottom_toBottomOf="@+id/txtUser"
+            app:layout_constraintEnd_toStartOf="@+id/txtUser"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toTopOf="@+id/txtUser" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/name_img"
             android:layout_width="50dp"
             android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="160dp"
-            android:src="@mipmap/image2"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/ic_identification"
+            app:layout_constraintBottom_toBottomOf="@+id/txtName"
+            app:layout_constraintEnd_toStartOf="@+id/txtName"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/txtName" />
 
         <EditText
             android:id="@+id/txtName"
-            android:layout_width="wrap_content"
+            style="@style/NormalText"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="156dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginRight="68dp"
-            android:ems="10"
-            android:fontFamily="@font/advent_pro"
-            android:hint="Nombre"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:hint="@string/name"
             android:inputType="textPersonName"
             android:text="@={viewModel.name}"
-            android:textColor="#020202"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/name_img"
+            app:layout_constraintTop_toBottomOf="@+id/title_text"
+            app:layout_constraintVertical_bias="0.060000002" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/add_info_txt"
+            style="@style/NormalText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="604dp"
+            android:layout_marginBottom="32dp"
             android:fontFamily="@font/advent_pro"
             android:gravity="center"
             android:text="@string/TeGustaria"
-            android:textColor="#050505"
-            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/contactanos_txt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/title_text"
+            style="@style/TitleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/advent_pro"
-            android:gravity="center"
-            android:text="¡Bienvenido!"
-            android:textColor="#050505"
-            android:textSize="40sp"
-            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:text="@string/welcome"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btnNewaccount"
+            style="@style/RedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="472dp"
-            android:fontFamily="@font/amaranth"
-            android:text="Crear cuenta"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:text="@string/crear_cuenta"
+            app:layout_constraintBottom_toTopOf="@+id/add_info_txt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
