@@ -23,7 +23,11 @@
         android:id="@+id/newAccountFragment"
         android:name="com.example.foodforme.newAccount.newAccountFragment"
         android:label="FOOD FOR ME"
-        tools:layout="@layout/new_account_fragment" />
+        tools:layout="@layout/new_account_fragment" >
+        <action
+            android:id="@+id/action_newAccountFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/userPreferencesFragment"
         android:name="com.example.foodforme.user_preferences.userPreferencesFragment"

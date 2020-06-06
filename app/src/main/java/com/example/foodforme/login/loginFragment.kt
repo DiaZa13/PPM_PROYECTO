@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -41,17 +42,17 @@ class loginFragment : Fragment() {
 
             if (user.isEmpty() || password.isEmpty())
                 makeWarning("Debes llenar todos los campos")
-            else
-                makeWarning("Cannot Log In")
-            /*viewModel.verifiedUser(userInput)
-            viewModel.isUser.observe(viewLifecycleOwner, Observer {
-                if (it) {
-                    view?.findNavController()?.navigate(R.id.action_loginFragment_to_userPreferencesFragment)
-                }
-                else{
-                    Toast.makeText(activity, "Usuario y/o contraseña incorrecto", Toast.LENGTH_SHORT).show()
-                }
-            })*/
+            else{
+                viewModel.isUser.observe(viewLifecycleOwner, Observer {
+                    if (it) {
+                        view?.findNavController()?.navigate(R.id.action_loginFragment_to_newAccountFragment)
+                    }
+                    else{
+                        makeWarning("Usuario y/o contraseña incorrecto")
+                    }
+                })
+            }
+
         }
         return binding.root
     }
@@ -65,6 +66,15 @@ class loginFragment : Fragment() {
         // TODO: Use the ViewModel
 
         binding.viewModel = viewModel
+        if(binding.txtUser.toString().isEmpty()){
+
+        }else{
+            viewModel.dbUser.observe(viewLifecycleOwner, Observer {
+                viewModel.isUser(it)
+            })
+        }
+
+
     }
 
     // Adaptado de https://stackoverflow.com/questions/32453946/how-to-customize-snackbars-layout/33441214#33441214

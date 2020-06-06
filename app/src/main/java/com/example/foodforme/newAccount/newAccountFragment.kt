@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 
 
 import com.example.foodforme.R
@@ -39,6 +40,7 @@ class newAccountFragment : Fragment() {
                 Toast.makeText(activity, "Por favor llene todos los campos proporcionados", Toast.LENGTH_SHORT).show()
             } else {
                 viewModel.insertGuest()
+                view?.findNavController()?.navigate(R.id.action_newAccountFragment_to_loginFragment)
             }
         }
 

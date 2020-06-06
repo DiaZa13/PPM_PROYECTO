@@ -4,10 +4,13 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.foodforme.database.User
 import com.example.foodforme.database.UserDatabaseDao
 import kotlinx.coroutines.*
 
 class LoginViewModel (val database:UserDatabaseDao): ViewModel() {
+
+    val dbUser = database.getUsers()
 
     val user = MutableLiveData<String>()
     val password = MutableLiveData<String>()
@@ -17,6 +20,9 @@ class LoginViewModel (val database:UserDatabaseDao): ViewModel() {
         get() = _isUser
 
 
+    var usersIndex = 0
+        private set
+
     private val viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
@@ -24,25 +30,21 @@ class LoginViewModel (val database:UserDatabaseDao): ViewModel() {
         _isUser.value = false;
     }
 
-    fun verifiedUser(userInput:String) {
-        uiScope.launch {
-            verified(userInput)
-        }
-    }
+    fun isUser(dbUser: List<User>){
+        usersIndex = dbUser.size
+        var index = 1
 
-
-    private suspend fun verified(userInput:String) {
-        withContext(Dispatchers.IO) {
-            val dbUser = database.getUser("FFM")
-           Log.i("LoginViewModel", dbUser?.user)
-            if (user.value.equals(dbUser?.user)) {
-                if (password.value.equals(dbUser?.password)) {
-                    _isUser.postValue(true)
+        while(index < usersIndex){
+                if(user.value == dbUser[index-1].user){
+                    Log.i("LoginViewModel",dbUser[index-1].user)
+                    if(password.value == dbUser[index-1].password)
+                        _isUser.value = true
                 }
-            } else {
-                _isUser.postValue(false)
+                else
+                    index ++
             }
-        }
+
     }
+
 
 }
