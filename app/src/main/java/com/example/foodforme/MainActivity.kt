@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
 
         navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, _: Bundle? ->
+            supportActionBar?.show()
             if (nd.id in topLevelDestinations) {
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
             } else {
