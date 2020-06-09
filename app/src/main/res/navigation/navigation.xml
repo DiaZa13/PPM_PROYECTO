@@ -60,4 +60,9 @@
         android:name="com.example.foodforme.filterFragment.FilterFragment"
         android:label="FilterFragment"
         tools:layout="@layout/fragment_filter"/>
+    <fragment
+        android:id="@+id/rateRestaurantFragment"
+        android:name="com.example.foodforme.rateRestaurant.RateRestaurantFragment"
+        android:label="RateRestaurantFragment"
+        tools:layout="@layout/fragment_rate_restaurant"/>
 </navigation>
