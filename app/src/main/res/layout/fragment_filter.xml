@@ -41,6 +41,13 @@
                     android:layout_height="wrap_content">
 
                     <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/appCompatRadioButton"
+                        style="@style/ClickableText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hamburguesas" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/ClickableText"

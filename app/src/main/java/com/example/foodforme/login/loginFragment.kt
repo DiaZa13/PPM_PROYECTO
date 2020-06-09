@@ -37,6 +37,9 @@ class loginFragment : Fragment() {
         binding.txtNewaccount.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_loginFragment_to_newAccountFragment)
         }
+        binding.txtAbo.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_loginFragment_to_aboutFragment)
+        }
 
         binding.btnStart.setOnClickListener {
             val user = binding.txtUser.text.toString()
