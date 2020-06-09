@@ -1,5 +1,4 @@
-package com.example.foodforme.login
-
+package com.example.foodforme.newAccount
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,56 +10,54 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 
+
 import com.example.foodforme.R
-import com.example.foodforme.databinding.LoginFragmentBinding
+import com.example.foodforme.databinding.NewAccountFragmentBinding
 import com.example.foodforme.databinding.SnackbarErrorBinding
 import com.google.android.material.snackbar.Snackbar
 
-class loginFragment : Fragment() {
-    private lateinit var viewModel: LoginViewModel
-    private lateinit var viewModelFactory: LoginViewModelFactory
-    private lateinit var binding: LoginFragmentBinding
+class newAccountFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    companion object {
+        fun newInstance() = newAccountFragment()
+    }
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false)
+    private lateinit var viewModel: NewAccountViewModel
+    private lateinit var viewModelFactory: NewAccountViewModelFactory
+    private lateinit var binding: NewAccountFragmentBinding
 
-        binding.txtNewaccount.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_loginFragment_to_newAccountFragment)
-        }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = DataBindingUtil.inflate(inflater, R.layout.new_account_fragment, container, false)
 
-        binding.btnStart.setOnClickListener {
-            val user = binding.txtUser.text.toString()
-            val password = binding.txtPassword.text.toString()
-
-            if (user.isEmpty() || password.isEmpty())
+        binding.btnNewaccount.setOnClickListener {
+            val user = binding.txtUser.toString()
+            val password = binding.txtPassword.toString()
+            if (user == "" || password == "") {
                 makeWarning("Debes llenar todos los campos")
-            else{
-                viewModel.logIn()
+            } else {
+                viewModel.newAccount()
             }
-
         }
+
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val application = requireNotNull(this.activity).application
-        viewModelFactory = LoginViewModelFactory()
-        viewModel = ViewModelProvider(this, viewModelFactory).get(LoginViewModel::class.java)
-        // TODO: Use the ViewModel
+        viewModel = ViewModelProvider(this).get(NewAccountViewModel::class.java)
 
         binding.viewModel = viewModel
 
-        viewModel.isUser.observe(viewLifecycleOwner, Observer {
+        viewModel.newUser.observe(viewLifecycleOwner, Observer {
             if (it) {
-                view?.findNavController()?.navigate(R.id.action_loginFragment_to_userPreferencesFragment)
-            }
-            else{
-                makeWarning("Usuario y/o contraseña incorrecto")
+                view?.findNavController()?.navigate(R.id.action_newAccountFragment_to_loginFragment)
+            }else{
+                makeWarning("La cuenta ya está en uso")
             }
         })
-
 
     }
 
@@ -87,4 +84,3 @@ class loginFragment : Fragment() {
     }
 
 }
-

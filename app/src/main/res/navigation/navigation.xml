@@ -16,8 +16,8 @@
             android:id="@+id/action_loginFragment_to_newAccountFragment"
             app:destination="@id/newAccountFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
+            android:id="@+id/action_loginFragment_to_userPreferencesFragment"
+            app:destination="@id/userPreferencesFragment" />
     </fragment>
     <fragment
         android:id="@+id/newAccountFragment"
@@ -27,13 +27,10 @@
         <action
             android:id="@+id/action_newAccountFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_newAccountFragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
     </fragment>
     <fragment
-        android:id="@+id/restaurantFragment"
-        android:name="com.example.foodforme.restaurants.restaurantFragment"
-        android:label="restaurant_fragment"
-        tools:layout="@layout/restaurant_fragment" />
+        android:id="@+id/userPreferencesFragment"
+        android:name="com.example.foodforme.userPreferences.userPreferencesFragment"
+        android:label="user_preferences_fragment"
+        tools:layout="@layout/user_preferences_fragment" />
 </navigation>
