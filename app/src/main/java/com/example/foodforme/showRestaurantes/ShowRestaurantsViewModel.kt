@@ -13,6 +13,7 @@ import com.google.firebase.database.ValueEventListener
 
 class ShowRestaurantsViewModel: ViewModel(){
 
+    val tipo = MutableLiveData<String>()
 
     private val _datos = MutableLiveData<List<Fb_restaurantes>>()
     val datos: LiveData<List<Fb_restaurantes>>
@@ -20,7 +21,8 @@ class ShowRestaurantsViewModel: ViewModel(){
 
 
     init{
-        val ref = FirebaseDatabase.getInstance().getReference("restaurantes")
+        //Filtra únicamente por tipo, hay que agregar el resto de filtrado
+        val ref = FirebaseDatabase.getInstance().getReference("restaurantes").orderByChild("type").equalTo(tipo.value)
         ref.addValueEventListener(object:ValueEventListener{
             @SuppressLint("LongLogTag")
             override fun onDataChange(p0: DataSnapshot) {
