@@ -54,7 +54,7 @@ class loginFragment : Fragment() {
 
         viewModel.isUser.observe(viewLifecycleOwner, Observer {
             if (it) {
-                view?.findNavController()?.navigate(R.id.action_loginFragment_to_userPreferencesFragment)
+                view?.findNavController()?.navigate(R.id.action_loginFragment_to_restaurantFragment)
             }
             else{
                 makeWarning("Usuario y/o contraseña incorrecto")

@@ -2,7 +2,7 @@
     <string name="app_name">FoodForMe</string>
     <string name="NewAccount">¿Todavía no tienes una cuenta?</string>
     <string name="TeGustaria">¿Te gustaría que tu restaurante aparezca en \nFOOD FOR ME?</string>
-    <string name="log_in"> Iniciar Sesión </string>
+    <string name="log_in"> Iniciar Sesión  </string>
     <string name="contactanos">Contáctanos</string>
     <string name="password">Contraseña</string>
     <string name="mail">Correo electrónico</string>
@@ -10,6 +10,7 @@
     <string name="name">Nombre</string>
     <string name="welcome">¡Bienvenido!</string>
     <string name="crear_cuenta">Crear cuenta</string>
+    <string name="btnGoogle">INICIAR SESIÓN CON GOOGLE</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
