@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="¿Cuánto esperas por persona?"/>
+                android:text="¿Cuánto esperas gastar por persona?"/>
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
