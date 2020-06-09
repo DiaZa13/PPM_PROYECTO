@@ -5,6 +5,10 @@
     android:id="@+id/navigation"
     tools:ignore="UnusedNavigation"
     app:startDestination="@id/aboutFragment">
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 
     <fragment
