@@ -7,11 +7,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.foodforme.R
 import com.example.foodforme.databinding.LoginFragmentBinding
 import com.example.foodforme.databinding.SnackbarErrorBinding
@@ -43,9 +45,7 @@ class loginFragment : Fragment() {
         binding.txtNewaccount.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_loginFragment_to_newAccountFragment)
         }
-        binding.txtAbo.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_loginFragment_to_aboutFragment)
-        }
+
 
         binding.btnStart.setOnClickListener {
             val user = binding.txtUser.text.toString()
@@ -58,6 +58,8 @@ class loginFragment : Fragment() {
             }
 
         }
+        (activity as AppCompatActivity).supportActionBar?.hide()
+
         binding.btnStart.setOnClickListener {
             val user = binding.txtUser.text.toString()
             val password = binding.txtPassword.text.toString()

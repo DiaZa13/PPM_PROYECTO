@@ -3,11 +3,11 @@ package com.example.foodforme.restaurantInfo
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.foodforme.data.Restaurant
+import com.example.foodforme.data.Fb_restaurantes
 
-class RestaurantInfoViewModel(restaurant: Restaurant) : ViewModel(){
-    private val _restaurante = MutableLiveData<Restaurant>(restaurant)
-    val restaurante : LiveData<Restaurant>
+class RestaurantInfoViewModel(restaurant: Fb_restaurantes) : ViewModel(){
+    private val _restaurante = MutableLiveData<Fb_restaurantes>(restaurant)
+    val restaurante : LiveData<Fb_restaurantes>
         get() = _restaurante
 
     /*init {

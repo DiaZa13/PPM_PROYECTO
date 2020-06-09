@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.foodforme.R
-import com.example.foodforme.data.Restaurant
+import com.example.foodforme.data.Fb_restaurantes
 import com.example.foodforme.databinding.FragmentShowRestaurantsBinding
 import com.google.firebase.database.*
 
@@ -42,7 +42,7 @@ class ShowRestaurantsFragment : Fragment() {
         return binding.root
     }
 
-    private fun restaurantDetails(restaurant: Restaurant){
+    private fun restaurantDetails(restaurant: Fb_restaurantes){
         val bundle = Bundle()
         bundle.putSerializable("Restaurant", restaurant)
         view?.findNavController()?.navigate(R.id.action_showRestaurantsFragment_to_restaurantInfoFragment, bundle)

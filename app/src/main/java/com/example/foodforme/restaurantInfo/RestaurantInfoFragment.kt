@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.foodforme.R
-import com.example.foodforme.data.Restaurant
+import com.example.foodforme.data.Fb_restaurantes
 import com.example.foodforme.databinding.FragmentRestaurantInfoBinding
 
 
@@ -24,7 +24,7 @@ class RestaurantInfoFragment() : Fragment() {
         binding.lifecycleOwner = this
 
         // Consigo los datos desde el Bundle
-        val restaurante: Restaurant = arguments?.getSerializable("Restaurant") as Restaurant
+        val restaurante: Fb_restaurantes = arguments?.getSerializable("Restaurant") as Fb_restaurantes
 
 
         // Creo el viewModel

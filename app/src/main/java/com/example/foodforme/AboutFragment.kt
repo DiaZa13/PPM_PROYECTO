@@ -24,7 +24,7 @@ class AboutFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_about, container, false)
         binding.txtNewaccount.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_aboutFragment_to_newAccountFragment2)
+            view?.findNavController()?.navigate(R.id.action_aboutFragment_to_newAccountFragment)
         }
         // Inflate the layout for this fragment
         return binding.root
