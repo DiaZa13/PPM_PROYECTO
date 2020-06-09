@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.foodforme.data.Fb_restaurantes
 import com.example.foodforme.data.Oferta
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -21,16 +22,16 @@ class ShowOfertasViewModel : ViewModel(){
         val ref = FirebaseDatabase.getInstance().getReference("promociones")
         ref.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
+                var list = ArrayList<Oferta>()
                 if (p0!!.exists()){
                     for(i in p0.children){
                         var oferta = i.getValue(Oferta::class.java)
                         if (oferta != null) {
-                            _datos.value = mutableListOf(
-                                Oferta(oferta.id,oferta.restaurante,oferta.menu,oferta.precio)
-                            )
+                            list.add(Oferta(oferta.id,oferta.restaurante,oferta.menu,oferta.precio))
 
                         }
                     }
+                    _datos.value = list
                 }
             }
             override fun onCancelled(p0: DatabaseError) {

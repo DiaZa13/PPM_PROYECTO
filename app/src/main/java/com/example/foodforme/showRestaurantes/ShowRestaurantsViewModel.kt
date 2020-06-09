@@ -24,16 +24,16 @@ class ShowRestaurantsViewModel: ViewModel(){
         ref.addValueEventListener(object:ValueEventListener{
             @SuppressLint("LongLogTag")
             override fun onDataChange(p0: DataSnapshot) {
+                var list = ArrayList<Fb_restaurantes>()
                 if (p0!!.exists()){
                     for(i in p0.children){
                         var restaurant = i.getValue(Fb_restaurantes::class.java)
                         if (restaurant != null) {
-                            _datos.value = mutableListOf(
-                                Fb_restaurantes(restaurant.id,restaurant.direction,restaurant.name,restaurant.phone,restaurant.rating,restaurant.type)
-                            )
+                            list.add(Fb_restaurantes(restaurant.id,restaurant.direction,restaurant.name,restaurant.phone,restaurant.rating,restaurant.type))
 
                         }
                     }
+                    _datos.value = list
                 }
             }
             override fun onCancelled(p0: DatabaseError) {
