@@ -55,7 +55,7 @@
                         style="@style/WhiteText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{`Tipo de Comida: ` + viewModel.restaurante.tipo}"
+                        android:text="@{`Tipo de Comida: ` + viewModel.restaurante.type}"
                         tools:text="Tipo de Comida: Hamburguesas" />
 
                     <TextView
