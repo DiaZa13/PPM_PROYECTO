@@ -130,7 +130,7 @@ class loginFragment : Fragment() {
 
         startActivityForResult(googleClient.signInIntent,Google)
     }
-    
+
 
 
 }
