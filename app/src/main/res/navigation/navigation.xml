@@ -4,11 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     tools:ignore="UnusedNavigation"
-<<<<<<< HEAD
-    app:startDestination="@id/loginFragment">
-=======
     app:startDestination="@id/aboutFragment">
->>>>>>> master
 
 
     <fragment
