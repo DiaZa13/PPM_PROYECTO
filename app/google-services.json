@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "260882134619-o1v0luhb2bpoab6t6i2kr480fla9k62a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodforme",
+            "certificate_hash": "279fe009aad42feba47a554a3bc5a9bc45deea4f"
+          }
+        },
+        {
           "client_id": "260882134619-aik0sg9hpt868ck6m2pehe0qdvb8n028.apps.googleusercontent.com",
           "client_type": 3
         }
