@@ -1,5 +1,6 @@
 package com.example.foodforme.newAccount
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,6 +41,17 @@ class newAccountFragment : Fragment() {
             } else {
                 viewModel.newAccount()
             }
+        }
+
+        binding.contactanosTxt.setOnClickListener {
+
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.setType("plain/text")
+            intent.putExtra(android.content.Intent.EXTRA_EMAIL,  arrayOf<String>("mis.proyectos.universitarios.api@gmail.com"))
+            intent.putExtra(android.content.Intent.EXTRA_SUBJECT,"PETICIÓN DE NUEVO RESTAURANTE");
+            intent.putExtra(android.content.Intent.EXTRA_TEXT, "");
+            startActivity(Intent.createChooser(intent,"Send"))
+
         }
 
         return binding.root
