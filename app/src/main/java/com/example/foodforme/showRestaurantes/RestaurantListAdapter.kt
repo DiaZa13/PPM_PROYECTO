@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodforme.data.Fb_restaurantes
-import com.example.foodforme.data.Restaurant
 import com.example.foodforme.databinding.RestaurantItemBinding
 
 class RestaurantListAdapter(val clickListener: RestaurantListener): ListAdapter<Fb_restaurantes, RestaurantListAdapter.ViewHolder>(GuestListDiffCallback()) {

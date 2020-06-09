@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.foodforme.R
 import com.example.foodforme.data.Fb_restaurantes
-import com.example.foodforme.data.Restaurant
 import com.example.foodforme.databinding.FragmentShowRestaurantsBinding
 import com.google.firebase.database.*
 
