@@ -4,7 +4,6 @@ package com.example.foodforme.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.*
 
 class LoginViewModel (): ViewModel() {
 
@@ -15,12 +14,6 @@ class LoginViewModel (): ViewModel() {
     val isUser: LiveData<Boolean>
         get() = _isUser
 
-
-    var usersIndex = 0
-        private set
-
-    private val viewModelJob = Job()
-    private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
 
 
