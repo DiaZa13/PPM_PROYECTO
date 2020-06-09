@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     tools:ignore="UnusedNavigation"
-    app:startDestination="@id/showOfertasFragment">
+    app:startDestination="@id/loginFragment">
 
 
     <fragment
@@ -16,8 +16,8 @@
             android:id="@+id/action_loginFragment_to_newAccountFragment"
             app:destination="@id/newAccountFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
+            android:id="@+id/action_loginFragment_to_showRestaurantsFragment2"
+            app:destination="@id/showRestaurantsFragment" />
     </fragment>
     <fragment
         android:id="@+id/newAccountFragment"
@@ -28,8 +28,8 @@
             android:id="@+id/action_newAccountFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_newAccountFragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
+            android:id="@+id/action_newAccountFragment_to_showRestaurantsFragment"
+            app:destination="@id/showRestaurantsFragment" />
     </fragment>
     <fragment
         android:id="@+id/showRestaurantsFragment"

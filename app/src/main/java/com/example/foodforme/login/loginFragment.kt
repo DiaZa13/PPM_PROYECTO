@@ -10,10 +10,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.foodforme.MainActivity
 
 import com.example.foodforme.R
 import com.example.foodforme.databinding.LoginFragmentBinding
 import com.example.foodforme.databinding.SnackbarErrorBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.snackbar.Snackbar
 
 class loginFragment : Fragment() {
@@ -54,7 +58,8 @@ class loginFragment : Fragment() {
 
         viewModel.isUser.observe(viewLifecycleOwner, Observer {
             if (it) {
-                view?.findNavController()?.navigate(R.id.action_loginFragment_to_restaurantFragment)
+                view?.findNavController()?.navigate(R.id.action_loginFragment_to_showRestaurantsFragment2)
+
             }
             else{
                 makeWarning("Usuario y/o contraseña incorrecto")
@@ -85,6 +90,8 @@ class loginFragment : Fragment() {
         }
         snackbar.setDuration(1500).show()
     }
+
+
 
 }
 
