@@ -30,7 +30,7 @@ class ShowRestaurantsViewModel: ViewModel(){
                         var restaurant = i.getValue(Restaurant::class.java)
                         if (restaurant != null) {
                             _datos.value = listOf(
-                                Restaurant(restaurant)
+                                
 
                             )
                         }
