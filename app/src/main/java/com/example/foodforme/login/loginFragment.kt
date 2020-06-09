@@ -58,7 +58,6 @@ class loginFragment : Fragment() {
             }
 
         }
-        (activity as AppCompatActivity).supportActionBar?.hide()
 
         binding.btnStart.setOnClickListener {
             val user = binding.txtUser.text.toString()

@@ -23,47 +23,25 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var binding: ActivityMainBinding
-    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
-
         drawerLayout = binding.drawerLayout
 
-        val topLevelDestinations = setOf(
-            R.id.aboutFragment,
-            R.id.showOfertasFragment,
-            R.id.filterFragment
-        )
-
-
         val navController = this.findNavController(R.id.myNavHostFragment)
-        appBarConfiguration = AppBarConfiguration.Builder(topLevelDestinations)
-            .setDrawerLayout(drawerLayout)
-            .build()
+        NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout)
 
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
-
-        navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, _: Bundle? ->
-            supportActionBar?.show()
-            if (nd.id in topLevelDestinations) {
-                drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
-            } else {
-                drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
-            }
-        }
-
+        NavigationUI.setupWithNavController(binding.navView,navController)
 
 
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHostFragment)
-        return NavigationUI.navigateUp(navController,appBarConfiguration)
+        return NavigationUI.navigateUp(navController,drawerLayout)
     }
 
 
 
 }
-
