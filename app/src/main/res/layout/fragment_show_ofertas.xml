@@ -10,14 +10,14 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorAccent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/restaurants_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/restaurant_item"/>
+            tools:listitem="@layout/oferta_item"/>
 
     </FrameLayout>
 </layout>

@@ -1,11 +1,11 @@
 package com.example.foodforme.user_preferences
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 
 import com.example.foodforme.R
 import com.example.foodforme.userPreferences.UserPreferencesViewModel
@@ -25,7 +25,7 @@ class userPreferencesFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(UserPreferencesViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(UserPreferencesViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

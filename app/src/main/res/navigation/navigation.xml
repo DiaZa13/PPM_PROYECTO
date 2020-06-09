@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     tools:ignore="UnusedNavigation"
-    app:startDestination="@id/showRestaurantsFragment">
+    app:startDestination="@id/showOfertasFragment">
 
 
     <fragment
@@ -38,4 +38,9 @@
         android:name="com.example.foodforme.showRestaurantes.ShowRestaurantsFragment"
         android:label="ShowRestaurantsFragment"
         tools:layout="@layout/fragment_show_restaurants"/>
+    <fragment
+        android:id="@+id/showOfertasFragment"
+        android:name="com.example.foodforme.showOfertas.ShowOfertasFragment"
+        android:label="ShowOfertasFragment"
+        tools:layout="@layout/fragment_show_ofertas"/>
 </navigation>
