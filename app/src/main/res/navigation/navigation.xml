@@ -18,6 +18,7 @@
         <action
             android:id="@+id/action_loginFragment_to_filterFragment"
             app:destination="@id/filterFragment"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -36,7 +37,7 @@
     <fragment
         android:id="@+id/showRestaurantsFragment"
         android:name="com.example.foodforme.showRestaurantes.ShowRestaurantsFragment"
-        android:label="ShowRestaurantsFragment"
+        android:label="FOOD FOR ME"
         tools:layout="@layout/fragment_show_restaurants">
         <action
             android:id="@+id/action_showRestaurantsFragment_to_restaurantInfoFragment"
@@ -45,17 +46,17 @@
     <fragment
         android:id="@+id/showOfertasFragment"
         android:name="com.example.foodforme.showOfertas.ShowOfertasFragment"
-        android:label="ShowOfertasFragment"
+        android:label="FOOD FOR ME"
         tools:layout="@layout/fragment_show_ofertas"/>
     <fragment
         android:id="@+id/restaurantFragment"
         android:name="com.example.foodforme.restaurants.restaurantFragment"
-        android:label="restaurant_fragment"
+        android:label="FOOD FOR ME"
         tools:layout="@layout/restaurant_fragment" />
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.foodforme.AboutFragment"
-        android:label="AboutFragment"
+        android:label="FOOD FOR ME"
         tools:layout="@layout/fragment_about">
         <action
             android:id="@+id/action_aboutFragment_to_newAccountFragment"
@@ -64,7 +65,7 @@
     <fragment
         android:id="@+id/filterFragment"
         android:name="com.example.foodforme.filterFragment.FilterFragment"
-        android:label="FilterFragment"
+        android:label="FOOD FOR ME"
         tools:layout="@layout/fragment_filter">
         <action
             android:id="@+id/action_filterFragment_to_showRestaurantsFragment"
@@ -73,12 +74,12 @@
     <fragment
         android:id="@+id/rateRestaurantFragment"
         android:name="com.example.foodforme.rateRestaurant.RateRestaurantFragment"
-        android:label="RateRestaurantFragment"
+        android:label="FOOD FOR ME"
         tools:layout="@layout/fragment_rate_restaurant"/>
     <fragment
         android:id="@+id/restaurantInfoFragment"
         android:name="com.example.foodforme.restaurantInfo.RestaurantInfoFragment"
-        android:label="RestaurantInfoFragment"
+        android:label="FOOD FOR ME"
         tools:layout="@layout/fragment_restaurant_info">
         <action
             android:id="@+id/action_restaurantInfoFragment_to_rateRestaurantFragment"
