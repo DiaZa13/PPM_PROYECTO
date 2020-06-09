@@ -36,14 +36,7 @@ class loginFragment : Fragment() {
             if (user.isEmpty() || password.isEmpty())
                 makeWarning("Debes llenar todos los campos")
             else{
-                viewModel.isUser.observe(viewLifecycleOwner, Observer {
-                    if (it) {
-                        view?.findNavController()?.navigate(R.id.action_loginFragment_to_newAccountFragment)
-                    }
-                    else{
-                        makeWarning("Usuario y/o contraseña incorrecto")
-                    }
-                })
+                viewModel.logIn()
             }
 
         }
@@ -58,6 +51,15 @@ class loginFragment : Fragment() {
         // TODO: Use the ViewModel
 
         binding.viewModel = viewModel
+
+        viewModel.isUser.observe(viewLifecycleOwner, Observer {
+            if (it) {
+                view?.findNavController()?.navigate(R.id.action_loginFragment_to_userPreferencesFragment)
+            }
+            else{
+                makeWarning("Usuario y/o contraseña incorrecto")
+            }
+        })
 
 
     }
