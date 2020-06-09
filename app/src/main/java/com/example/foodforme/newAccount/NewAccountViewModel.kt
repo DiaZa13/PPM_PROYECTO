@@ -2,11 +2,9 @@ package com.example.foodforme.newAccount
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.foodforme.database.User
-import com.example.foodforme.database.UserDatabaseDao
 import kotlinx.coroutines.*
 
-class NewAccountViewModel(val database: UserDatabaseDao): ViewModel() {
+class NewAccountViewModel(): ViewModel() {
 
     val name = MutableLiveData<String>()
     val userv = MutableLiveData<String>()
@@ -16,20 +14,5 @@ class NewAccountViewModel(val database: UserDatabaseDao): ViewModel() {
     private val viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    fun insertGuest() {
-        uiScope.launch {
-            insert()
-        }
-    }
 
-    private suspend fun insert(){
-        withContext(Dispatchers.IO) {
-            database.insert(User(name = name.value?:"", user = userv.value?:"",email = email.value?:"", password = password.value?: ""))
-        }
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        viewModelJob.cancel()
-    }
 }

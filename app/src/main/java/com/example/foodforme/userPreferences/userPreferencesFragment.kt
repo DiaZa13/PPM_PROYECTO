@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.foodforme.R
+import com.example.foodforme.userPreferences.UserPreferencesViewModel
 
 class userPreferencesFragment : Fragment() {
 

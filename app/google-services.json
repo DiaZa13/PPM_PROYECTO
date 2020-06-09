@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "260882134619",
+    "firebase_url": "https://foodforme-dom.firebaseio.com",
+    "project_id": "foodforme-dom",
+    "storage_bucket": "foodforme-dom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260882134619:android:1103306d606266dd4c317e",
+        "android_client_info": {
+          "package_name": "com.example.foodforme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260882134619-aik0sg9hpt868ck6m2pehe0qdvb8n028.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALGIKQCJZxikEU3O0m96UYpxsvB-gByic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260882134619-aik0sg9hpt868ck6m2pehe0qdvb8n028.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

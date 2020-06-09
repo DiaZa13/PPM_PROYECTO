@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="restaurant"
-            type="com.example.foodforme.database.Restaurant" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,7 +34,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:text="@{restaurant.name}"
+            android:text=""
             tools:text="Macdonald´s"
             app:layout_constraintBottom_toTopOf="@+id/telefono_txt"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:text="@{`Tel: ` + restaurant.phone}"
+            android:text=""
             tools:text="Tel: 1234-5678"
             app:layout_constraintBottom_toTopOf="@+id/direccion_txt"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:text="@{`Dirección: ` + restaurant.direccion}"
+            android:text=""
             tools:text="Dirección: Pesherman Calle Wallaby 22 - Sidney"
             app:layout_constraintBottom_toBottomOf="@+id/logo"
             app:layout_constraintEnd_toEndOf="parent"
