@@ -7,7 +7,7 @@ data class Restaurant(
     val id: String,
     val direction: String,
     val name: String,
-    val rating: Int,
     val phone: String,
+    val rating: Int,
     val type: String
-): Serializable
+):Serializable

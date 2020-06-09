@@ -29,10 +29,10 @@ class ShowRestaurantsViewModel: ViewModel(){
                     for(i in p0.children){
                         var restaurant = i.getValue(Restaurant::class.java)
                         if (restaurant != null) {
-                            _datos.value = listOf(
-                                
-
+                            _datos.value = mutableListOf(
+                                Restaurant(restaurant.id,restaurant.direction,restaurant.name,restaurant.phone,restaurant.rating,restaurant.type)
                             )
+
                         }
                     }
                 }
