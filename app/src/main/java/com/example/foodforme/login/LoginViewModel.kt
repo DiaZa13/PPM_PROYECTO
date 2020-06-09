@@ -29,7 +29,7 @@ class LoginViewModel (): ViewModel() {
                 }else{
                     _isUser.value = false
                     Log.w("NewAccountViewModel", it.exception)
-                    
+
                 }
             }
     }
