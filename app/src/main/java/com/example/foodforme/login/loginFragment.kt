@@ -44,6 +44,17 @@ class loginFragment : Fragment() {
             }
 
         }
+        binding.btnStart.setOnClickListener {
+            val user = binding.txtUser.text.toString()
+            val password = binding.txtPassword.text.toString()
+
+            if (user.isEmpty() || password.isEmpty())
+                makeWarning("Debes llenar todos los campos")
+            else{
+                viewModel.logIn()
+            }
+
+        }
         return binding.root
     }
 
