@@ -6,7 +6,7 @@
     <data>
         <variable
             name="restaurant"
-            type="com.example.foodforme.data.Restaurant" />
+            type="com.example.foodforme.data.Fb_restaurantes" />
         <variable
             name="clickListener"
             type="com.example.foodforme.showRestaurantes.RestaurantListener" />

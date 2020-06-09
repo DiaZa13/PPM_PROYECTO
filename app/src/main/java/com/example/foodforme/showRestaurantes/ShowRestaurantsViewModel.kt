@@ -1,8 +1,11 @@
 package com.example.foodforme.showRestaurantes
 
+import android.annotation.SuppressLint
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.foodforme.data.Fb_restaurantes
 import com.example.foodforme.data.Restaurant
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -13,35 +16,37 @@ import com.google.firebase.ktx.Firebase
 class ShowRestaurantsViewModel: ViewModel(){
 
 
-    private val _datos = MutableLiveData<List<Restaurant>>()
-
-    val datos: LiveData<List<Restaurant>>
+    private val _datos = MutableLiveData<List<Fb_restaurantes>>()
+    val datos: LiveData<List<Fb_restaurantes>>
         get() = _datos
+
+    private val _prueba = MutableLiveData<List<Restaurant>>()
+    val prueba: LiveData<List<Restaurant>>
+        get() = _prueba
 
     init{
         val ref = FirebaseDatabase.getInstance().getReference("restaurantes")
         ref.addValueEventListener(object:ValueEventListener{
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
+            @SuppressLint("LongLogTag")
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0!!.exists()){
                     for(i in p0.children){
                         var restaurant = i.getValue(Restaurant::class.java)
+                        if (restaurant != null) {
+                            _datos.value = mutableListOf(
+                                Fb_restaurantes(restaurant.id,restaurant.direction,restaurant.name,restaurant.phone,restaurant.rating,restaurant.type)
+                            )
+
+                        }
                     }
                 }
             }
+            override fun onCancelled(p0: DatabaseError) {
+                println(p0.toException())
+            }
         })
-        _datos.value = listOf(
-            Restaurant("0","Restaurante A", "1111","Dirección A", 5, "Hamburguesas"),
-            Restaurant("0","Restaurante B", "2222","Dirección B", 4, "Hamburguesas"),
-            Restaurant("0","Restaurante C", "3333","Dirección C", 4, "Hamburguesas"),
-            Restaurant("0","Restaurante D", "4444","Dirección D", 3, "Hamburguesas"),
-            Restaurant("0","Restaurante E", "5555","Dirección E", 3, "Hamburguesas"),
-            Restaurant("0","Restaurante F", "6666","Dirección F", 3, "Hamburguesas"),
-            Restaurant("0","Restaurante G", "7777","Dirección G", 1, "Hamburguesas")
-        )
+
+
     }
 
 }
