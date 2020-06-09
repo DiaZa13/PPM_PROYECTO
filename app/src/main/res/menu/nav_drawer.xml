@@ -9,8 +9,13 @@
 
     <item
         android:id="@+id/showOfertasFragment"
-        android:icon="@mipmap/ic_about"
+        android:icon="@drawable/ic_food"
         android:title="Ofertas" />
+
+    <item
+        android:id="@+id/showRestaurantsFragment"
+        android:icon="@mipmap/ic_about"
+        android:title="Restaurantes" />
 
 
 </menu>
