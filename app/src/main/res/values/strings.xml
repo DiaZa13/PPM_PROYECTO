@@ -16,4 +16,6 @@
     <string name="About">Acerca de la aplicación</string>
     <string name="AboutUs2">Food for Me es una aplicación que tiene como principal función el recomendarte los mejores restaurantes según tus gustos. ¿Tienes ganas de comer unas hamburguesa, pero no sabes a donde ir? ¿No te puedes decidir a que restaurante ir? Registrate ahora y te podremos ayudar ahora!.</string>
     <string name="filter_restaurant_title">Filtra tu Restaurante</string>
+    <string name="About3">¿Quiénes somos?</string>
+    <string name="Contactanos">Contáctanos: mis.proyectos.universitarios.api@gmail.com</string>
 </resources>
