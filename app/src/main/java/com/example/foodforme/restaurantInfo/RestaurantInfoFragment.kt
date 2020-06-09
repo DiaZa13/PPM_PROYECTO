@@ -9,10 +9,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.foodforme.R
+import com.example.foodforme.data.Restaurant
 import com.example.foodforme.databinding.FragmentRestaurantInfoBinding
 
 
-class RestaurantInfoFragment : Fragment() {
+class RestaurantInfoFragment() : Fragment() {
     private lateinit var binding: FragmentRestaurantInfoBinding
     private lateinit var viewModel: RestaurantInfoViewModel
 
@@ -22,7 +23,14 @@ class RestaurantInfoFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_restaurant_info, container, false)
         binding.lifecycleOwner = this
 
-        viewModel = ViewModelProvider(this).get(RestaurantInfoViewModel::class.java)
+        // Consigo los datos desde el Bundle
+        val restaurante: Restaurant = arguments?.getSerializable("Restaurant") as Restaurant
+
+
+        // Creo el viewModel
+        val application = requireNotNull(this.activity).application
+        val factory = RestaurantInfoViewModelFactory(restaurante) // TODO
+        viewModel = ViewModelProvider(this, factory).get(RestaurantInfoViewModel::class.java)
         binding.viewModel = viewModel
 
         binding.rateButton.setOnClickListener {

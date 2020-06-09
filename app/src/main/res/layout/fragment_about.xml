@@ -20,24 +20,22 @@
 
         <TextView
             android:id="@+id/textView"
-            style="@style/Widget.AppCompat.TextView.SpinnerItem"
-            android:layout_width="wrap_content"
+            style="@style/NormalText"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:fontFamily="@font/advent_pro"
+            android:layout_marginBottom="16dp"
             android:gravity="center"
             android:text="@string/AboutUs2"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtNewaccount"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.110000014" />
 
         <TextView
             android:id="@+id/txtNewaccount"
@@ -45,23 +43,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="28dp"
-            android:clickable="true"
-            android:focusable="true"
             android:text="@string/NewAccount"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            style="@style/TitleText"
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="27dp"
-            android:fontFamily="@font/advent_pro"
             android:text="@string/About3"
-            android:textColor="#070707"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />

@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.foodforme.R
+import com.example.foodforme.data.Restaurant
 import com.example.foodforme.databinding.FragmentShowRestaurantsBinding
 import com.google.firebase.database.*
 
@@ -29,17 +30,22 @@ class ShowRestaurantsFragment : Fragment() {
 
         // Para el recycler view
         val adapter = RestaurantListAdapter(RestaurantListener { 
-            restaurante -> view?.findNavController()?.navigate(R.id.action_showRestaurantsFragment_to_restaurantInfoFragment)
+            restaurante -> restaurantDetails(restaurante)
             
         })
         binding.restaurantsRecycler.adapter = adapter
         adapter.submitList(viewModel.datos.value)
-        // binding.restaurantsRecycler.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         viewModel.datos.observe(viewLifecycleOwner, Observer {
             it.let { adapter.submitList(it) }
         })
 
-
         return binding.root
+    }
+
+    private fun restaurantDetails(restaurant: Restaurant){
+        val bundle = Bundle()
+        bundle.putSerializable("Restaurant", restaurant)
+        view?.findNavController()?.navigate(R.id.action_showRestaurantsFragment_to_restaurantInfoFragment, bundle)
+
     }
 }
