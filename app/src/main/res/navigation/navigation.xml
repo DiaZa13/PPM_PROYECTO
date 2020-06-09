@@ -32,11 +32,6 @@
             app:destination="@id/restaurantFragment" />
     </fragment>
     <fragment
-        android:id="@+id/userPreferencesFragment"
-        android:name="com.example.foodforme.userPreferences.userPreferencesFragment"
-        android:label="user_preferences_fragment"
-        tools:layout="@layout/user_preferences_fragment" />
-    <fragment
         android:id="@+id/showRestaurantsFragment"
         android:name="com.example.foodforme.showRestaurantes.ShowRestaurantsFragment"
         android:label="ShowRestaurantsFragment"
@@ -46,6 +41,7 @@
         android:name="com.example.foodforme.showOfertas.ShowOfertasFragment"
         android:label="ShowOfertasFragment"
         tools:layout="@layout/fragment_show_ofertas"/>
+    <fragment
         android:id="@+id/restaurantFragment"
         android:name="com.example.foodforme.restaurants.restaurantFragment"
         android:label="restaurant_fragment"
