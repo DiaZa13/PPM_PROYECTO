@@ -34,5 +34,9 @@ class LoginViewModel (): ViewModel() {
             }
     }
 
+    fun logInGoogle(){
+
+    }
+
 
 }
