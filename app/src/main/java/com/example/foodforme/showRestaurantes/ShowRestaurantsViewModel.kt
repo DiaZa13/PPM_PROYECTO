@@ -21,7 +21,7 @@ class ShowRestaurantsViewModel: ViewModel(){
         get() = _datos
 
     init{
-        val ref = FirebaseDatabase.getInstance().getReference("restaurant")
+        val ref = FirebaseDatabase.getInstance().getReference("restaurantes")
         ref.addValueEventListener(object:ValueEventListener{
             @SuppressLint("LongLogTag")
             override fun onDataChange(p0: DataSnapshot) {
