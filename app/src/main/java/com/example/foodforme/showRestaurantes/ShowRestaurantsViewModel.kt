@@ -22,7 +22,7 @@ class ShowRestaurantsViewModel: ViewModel(){
 
     init{
         //Filtra únicamente por tipo, hay que agregar el resto de filtrado
-        val ref = FirebaseDatabase.getInstance().getReference("restaurantes").orderByChild("type").equalTo(tipo.value)
+        val ref = FirebaseDatabase.getInstance().getReference("restaurantes")
         ref.addValueEventListener(object:ValueEventListener{
             @SuppressLint("LongLogTag")
             override fun onDataChange(p0: DataSnapshot) {
