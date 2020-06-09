@@ -87,7 +87,7 @@ class loginFragment : Fragment() {
 
         viewModel.isUser.observe(viewLifecycleOwner, Observer {
             if (it) {
-                view?.findNavController()?.navigate(R.id.action_loginFragment_to_showRestaurantsFragment2)
+                view?.findNavController()?.navigate(R.id.action_loginFragment_to_filterFragment)
 
             }
             else{
@@ -130,7 +130,7 @@ class loginFragment : Fragment() {
 
         startActivityForResult(googleClient.signInIntent,Google)
     }
-
+    
 
 
 }
