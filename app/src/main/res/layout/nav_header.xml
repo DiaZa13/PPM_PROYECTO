@@ -14,19 +14,23 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/advent_pro"
         android:text="Food For Me"
-        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toEndOf="@+id/navHeaderImage"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.169" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="233dp"
-        android:layout_height="55dp"
+        android:layout_width="315dp"
+        android:layout_height="59dp"
         android:fontFamily="@font/advent_pro"
+        android:text="@string/Contactanos"
+        android:textColor="#F8F4F4"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,6 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/image14" />
+        app:srcCompat="@mipmap/ic_restaurant_location" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
