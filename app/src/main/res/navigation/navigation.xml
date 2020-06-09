@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     tools:ignore="UnusedNavigation"
-    app:startDestination="@id/aboutFragment">
+    app:startDestination="@id/filterFragment">
 
 
     <fragment
@@ -49,9 +49,15 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.foodforme.AboutFragment"
-        android:label="AboutFragment" >
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about">
         <action
             android:id="@+id/action_aboutFragment_to_newAccountFragment2"
             app:destination="@id/newAccountFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.foodforme.filterFragment.FilterFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/fragment_filter"/>
 </navigation>
