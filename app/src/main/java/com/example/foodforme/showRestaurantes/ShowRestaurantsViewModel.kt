@@ -11,7 +11,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.ktx.Firebase
 
 class ShowRestaurantsViewModel: ViewModel(){
 
@@ -20,9 +19,6 @@ class ShowRestaurantsViewModel: ViewModel(){
     val datos: LiveData<List<Fb_restaurantes>>
         get() = _datos
 
-    private val _prueba = MutableLiveData<List<Restaurant>>()
-    val prueba: LiveData<List<Restaurant>>
-        get() = _prueba
 
     init{
         val ref = FirebaseDatabase.getInstance().getReference("restaurantes")
@@ -31,7 +27,7 @@ class ShowRestaurantsViewModel: ViewModel(){
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0!!.exists()){
                     for(i in p0.children){
-                        var restaurant = i.getValue(Restaurant::class.java)
+                        var restaurant = i.getValue(Fb_restaurantes::class.java)
                         if (restaurant != null) {
                             _datos.value = mutableListOf(
                                 Fb_restaurantes(restaurant.id,restaurant.direction,restaurant.name,restaurant.phone,restaurant.rating,restaurant.type)
