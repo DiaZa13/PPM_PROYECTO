@@ -7,5 +7,10 @@
         android:icon="@mipmap/ic_about"
         android:title="Acerca de" />
 
+    <item
+        android:id="@+id/showOfertasFragment"
+        android:icon="@mipmap/ic_about"
+        android:title="Ofertas" />
+
 
 </menu>
