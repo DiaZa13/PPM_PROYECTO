@@ -7,119 +7,115 @@
 
     </data>
 
-    <FrameLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_text"
+                style="@style/TitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:gravity="center_horizontal"
+                android:text="@string/filter_restaurant_title"
+                android:layout_marginVertical="16dp"/>
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/title_text"
-                    style="@style/TitleText"
+            <TextView
+                style="@style/NormalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="¿Qué tipo de comida te gustaría probar?"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/appCompatRadioButton"
+                    style="@style/ClickableText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="@string/filter_restaurant_title"
-                    android:layout_marginVertical="16dp"/>
+                    android:text="Hamburguesas" />
 
-                <TextView
-                    style="@style/NormalText"
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="¿Qué tipo de comida te gustaría probar?"/>
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/ClickableText"
+                    android:text="TACOS" />
 
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/appCompatRadioButton"
-                        style="@style/ClickableText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Hamburguesas" />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/ClickableText"
-                        android:text="TACOS" />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/ClickableText"
-                        android:text="POLLO" />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/ClickableText"
-                        android:text="PIZZA" />
-
-                </RadioGroup>
-
-                <TextView
-                    style="@style/NormalText"
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="¿Cuánto esperas por persona?"/>
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    style="@style/ClickableText"
+                    android:text="POLLO" />
 
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/ClickableText"
-                        android:text="Q0 - Q50" />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/ClickableText"
-                        android:text="Q50 - Q100" />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/ClickableText"
-                        android:text="Más de Q100+" />
-                </RadioGroup>
-
-                <TextView
-                    style="@style/NormalText"
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="¿Cuál es el rating mínimo del restaurante que deseas visitar?"/>
-                <androidx.appcompat.widget.AppCompatRatingBar
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:numStars="5"
-                    style="@style/RatingBar"
-                    tools:rating="2"/>
+                    style="@style/ClickableText"
+                    android:text="PIZZA" />
 
-                <Button
-                    android:id="@+id/button"
-                    style="@style/RedButton"
-                    android:layout_marginVertical="32dp"
+            </RadioGroup>
+
+            <TextView
+                style="@style/NormalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="¿Cuánto esperas por persona?"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Buscar" />
+                    style="@style/ClickableText"
+                    android:text="Q0 - Q50" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ClickableText"
+                    android:text="Q50 - Q100" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ClickableText"
+                    android:text="Más de Q100+" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/NormalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="¿Cuál es el rating mínimo del restaurante que deseas visitar?"/>
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:numStars="5"
+                style="@style/RatingBar"
+                tools:rating="2"/>
+
+            <Button
+                android:id="@+id/button"
+                style="@style/RedButton"
+                android:layout_marginVertical="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar" />
 
 
             </LinearLayout>
         </ScrollView>
-    </FrameLayout>
 </layout>

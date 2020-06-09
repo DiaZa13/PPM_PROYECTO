@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     tools:ignore="UnusedNavigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/restaurantInfoFragment">
 
 
     <fragment
@@ -70,4 +70,10 @@
         android:name="com.example.foodforme.rateRestaurant.RateRestaurantFragment"
         android:label="RateRestaurantFragment"
         tools:layout="@layout/fragment_rate_restaurant"/>
+    <fragment
+        android:id="@+id/restaurantInfoFragment"
+        android:name="com.example.foodforme.restaurantInfo.RestaurantInfoFragment"
+        android:label="RestaurantInfoFragment"
+        tools:layout="@layout/fragment_restaurant_info"/>
+
 </navigation>
