@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import com.example.foodforme.R
 import com.example.foodforme.databinding.FragmentFilterBinding
 
@@ -24,10 +23,6 @@ class FilterFragment : Fragment() {
 
         // Creo mi viewmodel
         viewModel = ViewModelProvider(this).get(FilterViewModel::class.java)
-
-        binding.button.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_filterFragment_to_showRestaurantsFragment)
-        }
 
         return binding.root
     }

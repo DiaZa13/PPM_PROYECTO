@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import com.example.foodforme.R
 import com.example.foodforme.databinding.FragmentRestaurantInfoBinding
 
@@ -24,10 +23,6 @@ class RestaurantInfoFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(RestaurantInfoViewModel::class.java)
         binding.viewModel = viewModel
-
-        binding.rateButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_restaurantInfoFragment_to_rateRestaurantFragment)
-        }
 
         return binding.root
     }

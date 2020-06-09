@@ -65,7 +65,7 @@ class newAccountFragment : Fragment() {
 
         viewModel.newUser.observe(viewLifecycleOwner, Observer {
             if (it) {
-                view?.findNavController()?.navigate(R.id.action_loginFragment_to_filterFragment)
+                view?.findNavController()?.navigate(R.id.action_newAccountFragment_to_showRestaurantsFragment)
             }else{
                 makeWarning("La cuenta ya está en uso")
             }

@@ -15,9 +15,12 @@ import androidx.navigation.findNavController
 import com.example.foodforme.R
 import com.example.foodforme.databinding.LoginFragmentBinding
 import com.example.foodforme.databinding.SnackbarErrorBinding
+import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.Api
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
@@ -25,10 +28,13 @@ import kotlinx.android.synthetic.main.login_fragment.*
 
 
 class loginFragment : Fragment() {
+
+
     private lateinit var viewModel: LoginViewModel
     private lateinit var viewModelFactory: LoginViewModelFactory
     private lateinit var binding: LoginFragmentBinding
     private val Google = 100
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -64,6 +70,7 @@ class loginFragment : Fragment() {
 
             btnGoogle.setOnClickListener {
                 googleLogin()
+
             }
         }
         return binding.root
@@ -122,31 +129,9 @@ class loginFragment : Fragment() {
         val googleClient = GoogleSignIn.getClient(this.requireActivity(),googleConf)
 
         startActivityForResult(googleClient.signInIntent,Google)
-
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == Google) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            val account = task.getResult(ApiException::class.java)
-
-            if (account != null) {
-                val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-                FirebaseAuth.getInstance().signInWithCredential(credential).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        view?.findNavController()
-                            ?.navigate(R.id.action_loginFragment_to_filterFragment)
-                    } else {
-                        Log.w("MainActivity", it.exception)
-                    }
-                }
-            }
-
-        }
     }
 
 
 
-    }
+}
 
