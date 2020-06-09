@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.example.foodforme.R
 import com.example.foodforme.databinding.FragmentShowRestaurantsBinding
 import com.google.firebase.database.*

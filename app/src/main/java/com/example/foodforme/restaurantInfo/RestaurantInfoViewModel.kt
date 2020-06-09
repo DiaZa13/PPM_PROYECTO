@@ -12,6 +12,6 @@ class RestaurantInfoViewModel : ViewModel(){
         get() = _restaurante
 
     init {
-        _restaurante.value = Restaurant("Burger King", "22000000", "En el mundo", 4.3f, "Hamburguesas")
+        _restaurante.value = Restaurant("0", "Burger King", "22000000", "En el mundo", 3,"Hamburguesas")
     }
 }
