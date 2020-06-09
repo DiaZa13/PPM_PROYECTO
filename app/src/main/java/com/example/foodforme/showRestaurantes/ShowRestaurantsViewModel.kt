@@ -30,7 +30,6 @@ class ShowRestaurantsViewModel: ViewModel(){
                     for(i in p0.children){
                         var restaurant = i.getValue(Restaurant::class.java)
                     }
-
                 }
             }
         })
