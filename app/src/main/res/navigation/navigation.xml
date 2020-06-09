@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/userPreferencesFragment"
-        android:name="com.example.foodforme.user_preferences.userPreferencesFragment"
+        android:name="com.example.foodforme.userPreferences.userPreferencesFragment"
         android:label="user_preferences_fragment"
         tools:layout="@layout/user_preferences_fragment" />
 </navigation>

@@ -12,7 +12,6 @@ import androidx.navigation.findNavController
 
 
 import com.example.foodforme.R
-import com.example.foodforme.database.UserDatabase
 import com.example.foodforme.databinding.NewAccountFragmentBinding
 
 class newAccountFragment : Fragment() {
@@ -49,10 +48,7 @@ class newAccountFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val application = requireNotNull(this.activity).application
-        val dataSource = UserDatabase.getInstance(application).UserDatabaseDao
-        viewModelFactory = NewAccountViewModelFactory(dataSource)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(NewAccountViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(NewAccountViewModel::class.java)
 
         binding.viewModel = viewModel
 

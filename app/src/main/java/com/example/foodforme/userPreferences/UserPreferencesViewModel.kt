@@ -1,4 +1,4 @@
-package com.example.foodforme.user_preferences
+package com.example.foodforme.userPreferences
 
 import androidx.lifecycle.ViewModel
 
