@@ -8,12 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.foodforme.data.Restaurant
 import com.example.foodforme.databinding.RestaurantItemBinding
 
-class RestaurantListAdapter: ListAdapter<Restaurant, RestaurantListAdapter.ViewHolder>(GuestListDiffCallback()) {
+class RestaurantListAdapter(val clickListener: RestaurantListener): ListAdapter<Restaurant, RestaurantListAdapter.ViewHolder>(GuestListDiffCallback()) {
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
-        holder.bind(item)
+        holder.bind(item, clickListener)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,8 +22,9 @@ class RestaurantListAdapter: ListAdapter<Restaurant, RestaurantListAdapter.ViewH
 
     class ViewHolder private constructor(val binding: RestaurantItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Restaurant){
+        fun bind(item: Restaurant, clickListener: RestaurantListener){
             binding.restaurant = item
+            binding.clickListener = clickListener
             binding.executePendingBindings()
         }
 
@@ -45,4 +46,8 @@ class GuestListDiffCallback: DiffUtil.ItemCallback<Restaurant>() {
     override fun areContentsTheSame(oldItem: Restaurant, newItem: Restaurant): Boolean {
         return oldItem == newItem
     }
+}
+
+class RestaurantListener(val clickListener: (restaurante: Restaurant) -> Unit){
+    fun onClick(restaurante: Restaurant) = clickListener(restaurante)
 }

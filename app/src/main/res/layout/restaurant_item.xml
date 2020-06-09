@@ -7,6 +7,9 @@
         <variable
             name="restaurant"
             type="com.example.foodforme.data.Restaurant" />
+        <variable
+            name="clickListener"
+            type="com.example.foodforme.showRestaurantes.RestaurantListener" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -20,7 +23,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorAccent">
+            android:background="@color/colorAccent"
+            android:onClick="@{() -> clickListener.onClick(restaurant)}">
 
 
             <ImageView

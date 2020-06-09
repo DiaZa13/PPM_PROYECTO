@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.foodforme.R
 import com.example.foodforme.databinding.FragmentFilterBinding
 import com.example.foodforme.databinding.FragmentRateRestaurantBinding
@@ -21,6 +22,10 @@ class RateRestaurantFragment : Fragment() {
         // Muestro el Fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_rate_restaurant, container, false)
         binding.lifecycleOwner = this
+
+        binding.button.setOnClickListener{
+            findNavController().navigateUp()
+        }
 
         return binding.root
     }
