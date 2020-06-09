@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.foodforme.data.Restaurant
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+//import com.google.firebase.database.DataSnapshot
+//import com.google.firebase.database.DatabaseError
+//import com.google.firebase.database.FirebaseDatabase
+//import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 
 class ShowRestaurantsViewModel: ViewModel(){
@@ -19,7 +19,7 @@ class ShowRestaurantsViewModel: ViewModel(){
         get() = _datos
 
     init{
-        val ref = FirebaseDatabase.getInstance().getReference("restaurantes")
+        /*val ref = FirebaseDatabase.getInstance().getReference("restaurantes")
         ref.addValueEventListener(object:ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -32,15 +32,15 @@ class ShowRestaurantsViewModel: ViewModel(){
                     }
                 }
             }
-        })
+        })*/
         _datos.value = listOf(
-            Restaurant("Restaurante A", "1111","Dirección A", 5),
-            Restaurant("Restaurante B", "2222","Dirección B", 4),
-            Restaurant("Restaurante C", "3333","Dirección C", 4),
-            Restaurant("Restaurante D", "4444","Dirección D", 3),
-            Restaurant("Restaurante E", "5555","Dirección E", 3),
-            Restaurant("Restaurante F", "6666","Dirección F", 3),
-            Restaurant("Restaurante G", "7777","Dirección G", 1)
+            Restaurant("0","Restaurante A", "1111","Dirección A", 5, "Hamburguesas"),
+            Restaurant("0","Restaurante B", "2222","Dirección B", 4, "Hamburguesas"),
+            Restaurant("0","Restaurante C", "3333","Dirección C", 4, "Hamburguesas"),
+            Restaurant("0","Restaurante D", "4444","Dirección D", 3, "Hamburguesas"),
+            Restaurant("0","Restaurante E", "5555","Dirección E", 3, "Hamburguesas"),
+            Restaurant("0","Restaurante F", "6666","Dirección F", 3, "Hamburguesas"),
+            Restaurant("0","Restaurante G", "7777","Dirección G", 1, "Hamburguesas")
             )
     }
 
