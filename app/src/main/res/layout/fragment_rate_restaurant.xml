@@ -44,21 +44,24 @@
                     android:layout_height="wrap_content">
 
                     <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/price1"
+                        style="@style/WhiteText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/WhiteText"
                         android:text="Q0 - Q50" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/price2"
+                        style="@style/WhiteText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/WhiteText"
                         android:text="Q50 - Q100" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/price3"
+                        style="@style/WhiteText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/WhiteText"
                         android:text="Más de Q100+" />
                 </RadioGroup>
 

@@ -7,5 +7,6 @@ class update_restaurant (
     val name: String = "",
     val phone: String = "",
     val rating: Int = 1,
-    val type: String = ""
+    val type: String = "",
+    val price: Int = 1
 ): Serializable

@@ -27,19 +27,21 @@ class RateRestaurantFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_rate_restaurant, container, false)
         binding.lifecycleOwner = this
 
-        val rate = binding.ratingBar.numStars
+        val rate = binding.ratingBar.rating.toInt()
+        val price: Int
+
+        if(binding.price1.isChecked){
+            price = 1
+        }else if(binding.price2.isChecked){
+            price = 2
+        }else
+            price = 3
 
         // Ahora sí Diana, seguía dormido
         val restaurante: Fb_restaurantes = arguments?.getSerializable("Restaurant") as Fb_restaurantes
 
-        var newRate = (restaurante.rating) + ((rate/3) - 1)
-        if(newRate < 0){
-            newRate = 0
-        }else if(newRate > 5){
-            newRate = 5
-        }
         val ref = FirebaseDatabase.getInstance().reference
-        val newRestaurant = update_restaurant(restaurante.direction,restaurante.name,restaurante.phone,newRate,restaurante.type)
+        val newRestaurant = update_restaurant(restaurante.direction,restaurante.name,restaurante.phone,rate,restaurante.type,price)
         Log.i("RateRestaurantFragment",restaurante.id)
         binding.button.setOnClickListener{
             ref.child("restaurantes").child(restaurante.name).setValue(newRestaurant)
