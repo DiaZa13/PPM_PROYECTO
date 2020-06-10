@@ -30,6 +30,8 @@ class RateRestaurantFragment : Fragment() {
         val rate = binding.ratingBar.rating.toInt()
         val price: Int
 
+        val radioG = binding.radioGroup
+
         if(binding.price1.isChecked){
             price = 1
         }else if(binding.price2.isChecked){
@@ -37,11 +39,13 @@ class RateRestaurantFragment : Fragment() {
         }else
             price = 3
 
+
+
         // Ahora sí Diana, seguía dormido
         val restaurante: Fb_restaurantes = arguments?.getSerializable("Restaurant") as Fb_restaurantes
-
+        val newRate = (restaurante.rating + rate)/2
         val ref = FirebaseDatabase.getInstance().reference
-        val newRestaurant = update_restaurant(restaurante.direction,restaurante.name,restaurante.phone,rate,restaurante.type,price)
+        val newRestaurant = update_restaurant(restaurante.direction,restaurante.name,restaurante.phone,newRate,restaurante.type,price)
         Log.i("RateRestaurantFragment",restaurante.id)
         binding.button.setOnClickListener{
             ref.child("restaurantes").child(restaurante.name).setValue(newRestaurant)
