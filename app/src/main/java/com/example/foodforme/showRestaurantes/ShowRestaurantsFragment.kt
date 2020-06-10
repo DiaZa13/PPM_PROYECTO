@@ -39,6 +39,10 @@ class ShowRestaurantsFragment : Fragment() {
             it.let { adapter.submitList(it) }
         })
 
+        // Este es el restaurante Diana!
+        val restaurante: Fb_restaurantes = arguments?.getSerializable("Restaurant") as Fb_restaurantes
+        
+
         return binding.root
     }
 

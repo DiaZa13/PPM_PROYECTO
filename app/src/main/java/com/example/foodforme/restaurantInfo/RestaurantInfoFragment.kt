@@ -34,7 +34,9 @@ class RestaurantInfoFragment() : Fragment() {
         binding.viewModel = viewModel
 
         binding.rateButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_restaurantInfoFragment_to_rateRestaurantFragment)
+            val bundle = Bundle()
+            bundle.putSerializable("Restaurant", restaurante)
+            view?.findNavController()?.navigate(R.id.action_restaurantInfoFragment_to_rateRestaurantFragment, bundle)
         }
 
         return binding.root

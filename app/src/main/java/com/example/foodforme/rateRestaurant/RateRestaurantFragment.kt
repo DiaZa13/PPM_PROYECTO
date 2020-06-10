@@ -23,6 +23,8 @@ class RateRestaurantFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_rate_restaurant, container, false)
         binding.lifecycleOwner = this
 
+
+
         binding.button.setOnClickListener{
             findNavController().navigateUp()
         }
