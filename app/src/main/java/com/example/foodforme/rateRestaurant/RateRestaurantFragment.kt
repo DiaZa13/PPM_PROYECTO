@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.foodforme.R
+import com.example.foodforme.data.Fb_restaurantes
 import com.example.foodforme.databinding.FragmentFilterBinding
 import com.example.foodforme.databinding.FragmentRateRestaurantBinding
 import com.example.foodforme.filterFragment.FilterViewModel
@@ -24,6 +25,8 @@ class RateRestaurantFragment : Fragment() {
         binding.lifecycleOwner = this
 
 
+        // Ahora sí Diana, seguía dormido
+        val restaurante: Fb_restaurantes = arguments?.getSerializable("Restaurant") as Fb_restaurantes
 
         binding.button.setOnClickListener{
             findNavController().navigateUp()
