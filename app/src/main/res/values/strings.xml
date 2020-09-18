@@ -18,4 +18,8 @@
     <string name="filter_restaurant_title">Filtra tu Restaurante</string>
     <string name="About3">¿Quiénes somos?</string>
     <string name="Contactanos">mis.proyectos.universitarios.api@gmail.com</string>
+    <string name="WaterQuote">"Miles de personas han sobrevivido sin amor, ninguna sin agua" -W.H.Auden</string>
+    <string name="Timer">Contador de consumo de agua</string>
+    <string name="History">Historial de consumo de agua</string>
+    <string name="Tips">Tips para la reducción de consumo de agua</string>
 </resources>

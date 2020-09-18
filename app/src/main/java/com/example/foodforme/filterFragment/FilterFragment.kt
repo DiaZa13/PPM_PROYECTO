@@ -22,8 +22,16 @@ class FilterFragment : Fragment() {
         binding.lifecycleOwner = this
 
 
-        binding.button.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_filterFragment_to_showRestaurantsFragment)
+        binding.btnTimer.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_filterFragment_to_timerFragment)
+        }
+
+        binding.btnHistory.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_filterFragment_to_historyFragment)
+        }
+
+        binding.btnTips.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_filterFragment_to_tipsFragment)
         }
 
         // Creo mi viewmodel
