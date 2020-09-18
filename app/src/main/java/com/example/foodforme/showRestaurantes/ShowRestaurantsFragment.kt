@@ -27,7 +27,7 @@ class ShowRestaurantsFragment : Fragment() {
 
         // Creo mi viewmodel
         viewModel = ViewModelProvider(this).get(ShowRestaurantsViewModel::class.java)
-
+/*
         // Para el recycler view
         val adapter = RestaurantListAdapter(RestaurantListener { 
             restaurante -> restaurantDetails(restaurante)
@@ -43,10 +43,13 @@ class ShowRestaurantsFragment : Fragment() {
         return binding.root
     }
 
+    //Funcion que hace la conexion con el navigation
     private fun restaurantDetails(restaurant: Fb_restaurantes){
         val bundle = Bundle()
         bundle.putSerializable("Restaurant", restaurant)
         view?.findNavController()?.navigate(R.id.action_showRestaurantsFragment_to_restaurantInfoFragment, bundle)
 
     }
+    */
+
 }

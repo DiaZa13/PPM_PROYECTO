@@ -19,14 +19,15 @@ import com.google.firebase.database.FirebaseDatabase
 
 class RateRestaurantFragment : Fragment() {
     private lateinit var binding: FragmentRateRestaurantBinding
-    private lateinit var viewModel: FilterViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        // Muestro el Fragment
+        // Muestra el fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_rate_restaurant, container, false)
         binding.lifecycleOwner = this
 
+        /*
+        //Extracción de datos para enviar a firebase
         val rate = binding.ratingBar.rating.toInt()
         val price: Int
 
@@ -40,6 +41,7 @@ class RateRestaurantFragment : Fragment() {
             price = 3
 
 
+        //Envío de datos a firebase
 
         // Ahora sí Diana, seguía dormido
         val restaurante: Fb_restaurantes = arguments?.getSerializable("Restaurant") as Fb_restaurantes
@@ -52,8 +54,10 @@ class RateRestaurantFragment : Fragment() {
 
             findNavController().navigateUp()
 
-        }
+        }*/
 
         return binding.root
     }
+
+
 }

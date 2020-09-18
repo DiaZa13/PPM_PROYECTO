@@ -23,6 +23,8 @@ class RestaurantInfoFragment() : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_restaurant_info, container, false)
         binding.lifecycleOwner = this
 
+        /*
+        Cosas de ViewModel y Factory
         // Consigo los datos desde el Bundle
         val restaurante: Fb_restaurantes = arguments?.getSerializable("Restaurant") as Fb_restaurantes
 
@@ -38,7 +40,7 @@ class RestaurantInfoFragment() : Fragment() {
             bundle.putSerializable("Restaurant", restaurante)
             view?.findNavController()?.navigate(R.id.action_restaurantInfoFragment_to_rateRestaurantFragment, bundle)
         }
-
+    */
         return binding.root
     }
 }

@@ -7,91 +7,11 @@
 
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:layout_height="match_parent">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/title_text"
-                    style="@style/WhiteTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="Califica al Restaurante"
-                    android:layout_marginVertical="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-                <TextView
-                    style="@style/WhiteText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="¿Cuánto dinero usaste por persona?"/>
-                <RadioGroup
-                    android:id="@+id/radioGroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/price1"
-                        style="@style/WhiteText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Q0 - Q50" />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/price2"
-                        style="@style/WhiteText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Q50 - Q100" />
-
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/price3"
-                        style="@style/WhiteText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Más de Q100+" />
-                </RadioGroup>
-
-                <TextView
-                    style="@style/WhiteText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="¿Cómo calificarías al restaurante?"/>
-
-                <androidx.appcompat.widget.AppCompatRatingBar
-                    android:id="@+id/ratingBar"
-                    style="@style/RatingBar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:numStars="5"
-                    tools:rating="2" />
-
-                <Button
-                    android:id="@+id/button"
-                    style="@style/RedButton"
-                    android:layout_marginVertical="32dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Listo" />
-
-
-            </LinearLayout>
-        </ScrollView>
-    </FrameLayout>
 </layout>

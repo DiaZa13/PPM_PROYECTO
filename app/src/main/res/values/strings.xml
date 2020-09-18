@@ -14,11 +14,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="About">Acerca de la aplicación</string>
-    <string name="AboutUs2">Food for Me es una aplicación que tiene como principal función el recomendarte los mejores restaurantes según tus gustos. ¿Tienes ganas de comer unas hamburguesa, pero no sabes a donde ir? ¿No te puedes decidir a que restaurante ir? Registrate ahora y te podremos ayudar ahora!.</string>
+    <string name="AboutUs2">Uso Responsable Del Agua (URDA) es una aplicación que busca concientizar acerca del uso responsable de un recurso tan vital como lo es el agua. Por medio de diversos tips y un contador que permita registrar la cantidad de agua que una persona gasta en sus actividades diarias, URDA espera que todos puedan aprender a consumir de manera responsable el agua.</string>
     <string name="filter_restaurant_title">Filtra tu Restaurante</string>
     <string name="About3">¿Quiénes somos?</string>
     <string name="Contactanos">mis.proyectos.universitarios.api@gmail.com</string>
     <string name="WaterQuote">"Miles de personas han sobrevivido sin amor, ninguna sin agua" -W.H.Auden</string>
+    <string name="WaterQuote1">Olvidamos que el ciclo del agua y el ciclo de la vida son uno mismo  -Jacques Y.Cousteau</string>
     <string name="Timer">Contador de consumo de agua</string>
     <string name="History">Historial de consumo de agua</string>
     <string name="Tips">Tips para la reducción de consumo de agua</string>

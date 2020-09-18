@@ -9,113 +9,11 @@
             type="com.example.foodforme.restaurantInfo.RestaurantInfoViewModel" />
     </data>
 
-    <ScrollView
-        android:layout_height="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:paddingHorizontal="16dp"
-        android:background="@color/colorPrimary">
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="16dp"
-                android:adjustViewBounds="true"
-                android:src="@mipmap/logo_white" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_marginVertical="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:cardCornerRadius="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="32dp"
-                    android:paddingVertical="16dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        style="@style/WhiteTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@{viewModel.restaurante.name}"
-                        tools:text="BurgerKing" />
-
-                    <TextView
-                        style="@style/WhiteText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@{`Tipo de Comida: ` + viewModel.restaurante.type}"
-                        tools:text="Tipo de Comida: Hamburguesas" />
-
-                    <TextView
-                        style="@style/WhiteText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@{`Rating: ` + viewModel.restaurante.rating}"
-                        tools:text="Rating: 4.3" />
-
-                    <TextView
-                        style="@style/WhiteText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@{`Tel: ` + viewModel.restaurante.phone}"
-                        tools:text="Tel: 2200-0000" />
-
-                </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/colorAccent">
-
-                <TextView
-                    style="@style/WhiteText"
-                    android:padding="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@{viewModel.restaurante.direction}"
-                    tools:text="Alguna Dirección" />
-
-            </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="16dp"
-                android:layout_gravity="center_horizontal"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#FFFF">
-
-                <TextView
-                    android:id="@+id/rate_button"
-                    style="@style/NormalText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:text="RATE" />
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-    </ScrollView>
 </layout>

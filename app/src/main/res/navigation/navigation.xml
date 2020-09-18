@@ -27,9 +27,6 @@
         android:label="FOOD FOR ME"
         tools:layout="@layout/new_account_fragment" >
         <action
-            android:id="@+id/action_newAccountFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
             android:id="@+id/action_newAccountFragment_to_filterFragment"
             app:destination="@id/filterFragment"
             app:popUpToInclusive="true" />
@@ -38,11 +35,7 @@
         android:id="@+id/showRestaurantsFragment"
         android:name="com.example.foodforme.showRestaurantes.ShowRestaurantsFragment"
         android:label="FOOD FOR ME"
-        tools:layout="@layout/fragment_show_restaurants">
-        <action
-            android:id="@+id/action_showRestaurantsFragment_to_restaurantInfoFragment"
-            app:destination="@id/restaurantInfoFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_show_restaurants"/>
     <fragment
         android:id="@+id/showOfertasFragment"
         android:name="com.example.foodforme.showOfertas.ShowOfertasFragment"
@@ -68,9 +61,6 @@
         android:label="FOOD FOR ME"
         tools:layout="@layout/fragment_filter">
         <action
-            android:id="@+id/action_filterFragment_to_showRestaurantsFragment"
-            app:destination="@id/showRestaurantsFragment" />
-        <action
             android:id="@+id/action_filterFragment_to_historyFragment"
             app:destination="@id/historyFragment" />
         <action
@@ -89,25 +79,36 @@
         android:id="@+id/restaurantInfoFragment"
         android:name="com.example.foodforme.restaurantInfo.RestaurantInfoFragment"
         android:label="FOOD FOR ME"
-        tools:layout="@layout/fragment_restaurant_info">
-        <action
-            android:id="@+id/action_restaurantInfoFragment_to_rateRestaurantFragment"
-            app:destination="@id/rateRestaurantFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_restaurant_info"/>
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.example.foodforme.history.historyFragment"
         android:label="history_fragment"
-        tools:layout="@layout/history_fragment" />
+        tools:layout="@layout/history_fragment" >
+        <action
+            android:id="@+id/action_historyFragment_to_restaurantInfoFragment"
+            app:destination="@id/restaurantInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/timerFragment"
         android:name="com.example.foodforme.timer.timerFragment"
         android:label="timer_fragment"
-        tools:layout="@layout/timer_fragment" />
+        tools:layout="@layout/timer_fragment" >
+        <action
+            android:id="@+id/action_timerFragment_to_rateRestaurantFragment"
+            app:destination="@id/rateRestaurantFragment" />
+        <action
+            android:id="@+id/action_timerFragment_to_restaurantFragment"
+            app:destination="@id/restaurantFragment" />
+    </fragment>
     <fragment
         android:id="@+id/tipsFragment"
         android:name="com.example.foodforme.tips.tipsFragment"
         android:label="tips_fragment"
-        tools:layout="@layout/tips_fragment" />
+        tools:layout="@layout/tips_fragment" >
+        <action
+            android:id="@+id/action_tipsFragment_to_showRestaurantsFragment"
+            app:destination="@id/showRestaurantsFragment" />
+    </fragment>
 
 </navigation>
