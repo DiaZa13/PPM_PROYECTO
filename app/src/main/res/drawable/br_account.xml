@@ -5,8 +5,8 @@
     <corners android:radius="150dp"/>
 
     <stroke android:width="5px"
-        android:color="@color/btn_Google"/>
+        android:color="@color/colorAccentDark"/>
 
-    <solid android:color="@color/btn_Google"/>
+    <solid android:color="@color/colorAccentDark"/>
 
 </shape>

@@ -18,6 +18,16 @@
         android:foregroundGravity="center_vertical|center">
 
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="414dp"
+            android:layout_height="163dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/contactanos_txt"
             style="@style/ClickableText"
@@ -107,6 +117,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="70sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -114,12 +126,15 @@
         <Button
             android:id="@+id/btnNewaccount"
             style="@style/RedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="201dp"
+            android:layout_height="63dp"
+            android:background="@drawable/br_account"
             android:text="@string/crear_cuenta"
+            android:textColor="@drawable/change_color_text1"
             app:layout_constraintBottom_toTopOf="@+id/add_info_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

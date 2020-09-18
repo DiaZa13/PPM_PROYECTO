@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FoodForMe</string>
     <string name="NewAccount">¿Todavía no tienes una cuenta?</string>
-    <string name="TeGustaria">¿Te gustaría que tu restaurante aparezca en \nFOOD FOR ME?</string>
+    <string name="TeGustaria">¿Tienes más tips sobre cómo reducir el consumo de agua?</string>
     <string name="log_in"> Iniciar Sesión  </string>
     <string name="contactanos">Contáctanos</string>
     <string name="password">Contraseña</string>

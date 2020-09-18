@@ -2,7 +2,9 @@
 <resources>
     <color name="colorPrimary">#282533</color>
     <color name="colorPrimaryDark">#191b24</color>
-    <color name="colorAccent">#FF0000</color>
-    <color name="btn_Google">#F4511E</color>
+    <color name="colorAccent">#8CCCE5</color>
+    <color name="colorAccentDark">#66C4D0</color>
     <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="brown">#5E451B</color>
 </resources>

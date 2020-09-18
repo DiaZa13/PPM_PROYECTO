@@ -14,7 +14,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
 
         <EditText
@@ -22,7 +23,7 @@
             style="@style/NormalText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:hint="@string/mail"
@@ -82,14 +83,14 @@
             style="@style/RedButton"
             android:layout_width="268dp"
             android:layout_height="51dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/br_correo"
             android:drawableStart="@mipmap/ic_correo"
             android:drawableLeft="@mipmap/ic_correo"
             android:fontFamily="@font/amaranth"
             android:gravity="center"
             android:text="@string/log_in"
-            android:textColor="@drawable/change_color_text1"
+            android:textColor="@drawable/change_color_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,33 +111,16 @@
 
         <ImageView
             android:id="@+id/logo_image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@color/colorPrimary"
+            android:layout_width="415dp"
+            android:layout_height="194dp"
+            android:background="@color/white"
             android:scaleType="centerInside"
-            android:src="@mipmap/logo_white"
+            android:src="@mipmap/URDA_LOGO"
             app:layout_constraintDimensionRatio="5:3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnGoogle"
-            android:layout_width="280dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/br_google"
-            android:drawableStart="@mipmap/ic_google"
-            android:drawableLeft="@mipmap/ic_google"
-            android:fontFamily="@font/advent_pro"
-            android:text="@string/btnGoogle"
-            android:textColor="@drawable/change_color_text"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnStart" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
