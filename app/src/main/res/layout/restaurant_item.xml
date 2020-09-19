@@ -5,11 +5,8 @@
 
     <data>
         <variable
-            name="restaurant"
-            type="com.example.foodforme.data.Fb_restaurantes" />
-        <variable
-            name="clickListener"
-            type="com.example.foodforme.showRestaurantes.RestaurantListener" />
+            name="tip"
+            type="com.example.foodforme.data.Tips" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,15 +16,16 @@
 
         <ImageView
             android:id="@+id/tip_icon"
-            android:layout_width="126dp"
-            android:layout_height="172dp"
+            android:layout_width="129dp"
+            android:layout_height="182dp"
             android:layout_marginStart="2dp"
             android:layout_marginLeft="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.538"
-            app:srcCompat="@mipmap/tip_ducha" />
+            app:srcCompat="@mipmap/tip_ducha"
+            app:setImage="@{tip}"/>
 
         <TextView
             android:id="@+id/tip_tittle"
@@ -37,12 +35,13 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/advent_pro"
-            android:text="Tomar duchas cortas"
+            android:text="@{tip.tittle}"
             android:textColor="@color/brown"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/tip_icon"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tomar duchas cortas"/>
 
         <TextView
             android:id="@+id/tip_description"
@@ -53,15 +52,16 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="52dp"
             android:fontFamily="@font/advent_pro"
-            android:text="Toma duchas en lugar de baños, es decir tarde entre 3 a 5 min max para bañarte, así mismo, puedes cerrar la regadera mientras te enjuagas."
+            android:text="@{tip.description}"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tip_icon"
-            app:layout_constraintTop_toBottomOf="@+id/tip_tittle" />
+            app:layout_constraintTop_toBottomOf="@+id/tip_tittle"
+            tools:text="Toma duchas en lugar de baños, es decir tarde entre 3 a 5 min max para bañarte, así mismo, puedes cerrar la regadera mientras te enjuagas."/>
 
         <TextView
-            android:id="@+id/tip_reduction"
+            android:id="@+id/tip_message"
             android:layout_width="114dp"
             android:layout_height="27dp"
             android:layout_marginStart="8dp"
@@ -78,15 +78,16 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/tip_reduction"
             android:layout_width="151dp"
             android:layout_height="27dp"
             android:fontFamily="@font/advent_pro"
-            android:text="30 mil litros al año"
+            android:text="@{tip.reduction}"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/tip_icon"
-            app:layout_constraintStart_toEndOf="@+id/tip_reduction" />
+            app:layout_constraintStart_toEndOf="@+id/tip_message"
+            tools:text="30 mil litros al año"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

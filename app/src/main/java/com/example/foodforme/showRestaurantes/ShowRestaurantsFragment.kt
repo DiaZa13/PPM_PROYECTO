@@ -5,13 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import com.example.foodforme.R
-import com.example.foodforme.data.Fb_restaurantes
+import com.example.foodforme.data.Tips
 import com.example.foodforme.databinding.FragmentShowRestaurantsBinding
 import com.google.firebase.database.*
 
@@ -22,17 +20,17 @@ class ShowRestaurantsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Muestro el Fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_show_restaurants, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_show_restaurants, container, false)
         binding.lifecycleOwner = this
 
         // Creo mi viewmodel
         viewModel = ViewModelProvider(this).get(ShowRestaurantsViewModel::class.java)
-/*
+
         // Para el recycler view
         val adapter = RestaurantListAdapter(RestaurantListener { 
-            restaurante -> restaurantDetails(restaurante)
-            
-        })
+            tip -> restaurantDetails(tip) })
+
         binding.restaurantsRecycler.adapter = adapter
         adapter.submitList(viewModel.datos.value)
         viewModel.datos.observe(viewLifecycleOwner, Observer {
@@ -44,12 +42,10 @@ class ShowRestaurantsFragment : Fragment() {
     }
 
     //Funcion que hace la conexion con el navigation
-    private fun restaurantDetails(restaurant: Fb_restaurantes){
+    private fun restaurantDetails(tip: Tips){
         val bundle = Bundle()
-        bundle.putSerializable("Restaurant", restaurant)
-        view?.findNavController()?.navigate(R.id.action_showRestaurantsFragment_to_restaurantInfoFragment, bundle)
-
+        bundle.putSerializable("Restaurant", tip)
+        //view?.findNavController()?.navigate(R.id.ac, bundle)
     }
-    */
 
 }

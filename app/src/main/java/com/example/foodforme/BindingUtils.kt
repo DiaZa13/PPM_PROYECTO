@@ -3,15 +3,16 @@ package com.example.foodforme
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.example.foodforme.data.Fb_restaurantes
+import com.example.foodforme.data.Tips
 
 @BindingAdapter("setImage")
-fun ImageView.setImage(item: Fb_restaurantes){
+fun ImageView.setImage(item: Tips){
     item?.let{
         setImageResource(when(item.name){
-            "Pollo Campero" -> R.drawable.pollo_campero
-            "Burger King" -> R.drawable.burger_king
-            "Pizza Hut" -> R.drawable.macdonald
-            "Taco Bell" -> R.drawable.taco_bell
+            "Duchar" -> R.mipmap.tip_ducha
+            "Cocinar" -> R.drawable.tip_cocinar
+            "Afeitar" -> R.drawable.tip_afeitar
+            "Cepillar" -> R.drawable.tip_cepillar
             else -> R.mipmap.logo_white
         })
     }

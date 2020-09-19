@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.foodforme.data.Fb_restaurantes
+import com.example.foodforme.data.Tips
 import com.example.foodforme.databinding.RestaurantItemBinding
 
-class RestaurantListAdapter(val clickListener: RestaurantListener): ListAdapter<Fb_restaurantes, RestaurantListAdapter.ViewHolder>(GuestListDiffCallback()) {
+class RestaurantListAdapter(val clickListener: RestaurantListener): ListAdapter<Tips, RestaurantListAdapter.ViewHolder>(GuestListDiffCallback()) {
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -22,9 +22,8 @@ class RestaurantListAdapter(val clickListener: RestaurantListener): ListAdapter<
 
     class ViewHolder private constructor(val binding: RestaurantItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Fb_restaurantes, clickListener: RestaurantListener){
-            binding.restaurant = item
-            binding.clickListener = clickListener
+        fun bind(item: Tips, clickListener: RestaurantListener){
+            binding.tip = item
             binding.executePendingBindings()
         }
 
@@ -38,16 +37,16 @@ class RestaurantListAdapter(val clickListener: RestaurantListener): ListAdapter<
     }
 }
 
-class GuestListDiffCallback: DiffUtil.ItemCallback<Fb_restaurantes>() {
-    override fun areItemsTheSame(oldItem: Fb_restaurantes, newItem: Fb_restaurantes): Boolean {
-        return oldItem.name == newItem.name
+class GuestListDiffCallback: DiffUtil.ItemCallback<Tips>() {
+    override fun areItemsTheSame(oldItem: Tips, newItem: Tips): Boolean {
+        return oldItem.tittle == newItem.tittle
     }
 
-    override fun areContentsTheSame(oldItem: Fb_restaurantes, newItem: Fb_restaurantes): Boolean {
+    override fun areContentsTheSame(oldItem: Tips, newItem: Tips): Boolean {
         return oldItem.equals(newItem)
     }
 }
 
-class RestaurantListener(val clickListener: (restaurante: Fb_restaurantes) -> Unit){
-    fun onClick(restaurante: Fb_restaurantes) = clickListener(restaurante)
+class RestaurantListener(val clickListener: (tip: Tips) -> Unit){
+    fun onClick(tip: Tips) = clickListener(tip)
 }

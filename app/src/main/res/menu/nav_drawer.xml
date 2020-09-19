@@ -9,7 +9,7 @@
 
     <item
         android:id="@+id/showOfertasFragment"
-        android:icon="@drawable/ic_food"
+        android:icon="@drawable/tip_afeitar"
         android:title="Ofertas" />
 
     <item
