@@ -27,11 +27,11 @@ class FilterFragment : Fragment() {
         }
 
         binding.btnHistory.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_filterFragment_to_historyFragment)
+            view?.findNavController()?.navigate(R.id.action_filterFragment_to_showOfertasFragment)
         }
 
         binding.btnTips.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_filterFragment_to_tipsFragment)
+            view?.findNavController()?.navigate(R.id.action_filterFragment_to_showRestaurantsFragment)
         }
 
         // Creo mi viewmodel
