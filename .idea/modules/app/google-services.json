@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "710960071079",
+    "firebase_url": "https://ahorraagua-621f5.firebaseio.com",
+    "project_id": "ahorraagua-621f5",
+    "storage_bucket": "ahorraagua-621f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710960071079:android:a6a86ee3d63d4fc096b682",
+        "android_client_info": {
+          "package_name": "com.example.foodforme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710960071079-paaiih06vl65jbmvglvbtm8ot6e1s38u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodforme",
+            "certificate_hash": "c3326db42ece7b9e0c2e404290dcc0821be2a9a5"
+          }
+        },
+        {
+          "client_id": "710960071079-cfclg5iunkofh0dkae6klbjpdokn0tnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKYzEV6Jte-BlZu7OSiA0-xGrzi-JIiJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710960071079-cfclg5iunkofh0dkae6klbjpdokn0tnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
