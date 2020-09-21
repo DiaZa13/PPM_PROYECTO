@@ -70,9 +70,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¿Cuánta agua gastas?"
+            android:textStyle="bold"
             android:textColor="#03A9F4"
             android:textSize="40sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/chronometer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,40 +94,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title"
             app:layout_constraintVertical_bias="0.122" />
-
-        <TextView
-            android:id="@+id/spent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Haz utilizado: "
-            android:textAlignment="center"
-            android:textColor="#03A9F4"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.213"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnStart"
-            app:layout_constraintVertical_bias="0.353" />
-
-        <TextView
-            android:id="@+id/lbAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="  L"
-            android:textAlignment="center"
-            android:textColor="#03A9F4"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.572"
-            app:layout_constraintStart_toEndOf="@+id/spent"
-            app:layout_constraintTop_toBottomOf="@+id/btnStart"
-            app:layout_constraintVertical_bias="0.353" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

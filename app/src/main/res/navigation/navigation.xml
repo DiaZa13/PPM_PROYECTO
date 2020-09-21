@@ -87,7 +87,7 @@
         tools:layout="@layout/history_fragment" />
     <fragment
         android:id="@+id/timerFragment"
-        android:name="com.example.foodforme.timer.timerFragment"
+        android:name="com.example.foodforme.timer.TimerFragment"
         android:label="timer_fragment"
         tools:layout="@layout/timer_fragment" >
         <action
