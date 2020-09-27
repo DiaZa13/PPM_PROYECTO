@@ -23,7 +23,7 @@
             style="@style/NormalText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:hint="@string/mail"
@@ -83,7 +83,7 @@
             style="@style/RedButton"
             android:layout_width="268dp"
             android:layout_height="51dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/br_correo"
             android:drawableStart="@mipmap/ic_correo"
             android:drawableLeft="@mipmap/ic_correo"
@@ -107,7 +107,7 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnStart"
-            app:layout_constraintVertical_bias="0.685" />
+            app:layout_constraintVertical_bias="0.116" />
 
         <ImageView
             android:id="@+id/logo_image"
@@ -115,7 +115,6 @@
             android:layout_height="194dp"
             android:background="@color/white"
             android:scaleType="centerInside"
-            android:src="@mipmap/URDA_LOGO"
             app:layout_constraintDimensionRatio="5:3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

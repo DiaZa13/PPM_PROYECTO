@@ -27,31 +27,47 @@ class TimerFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.timer_fragment, container, false)
         var stopTime: Long = 0
         var totalTime: Long = 0
-        btnStart.setOnClickListener {
+        var litros: String = ""
+        var pauseTime: Long = 0
+        var isRunning: Boolean = false
+        binding.btnStart.setOnClickListener {
             totalTime = 0
             chronometer.base = SystemClock.elapsedRealtime()+stopTime
             chronometer.start()
             btnStart.visibility = View.GONE
             btnPause.visibility = View.VISIBLE
             btnStop.visibility = View.VISIBLE
-            lbAmount.text = (totalTime* 0.2).toString() + "L"
+            litros = totalTime.toString()
+            lbAmount.text = litros
+            isRunning = true
         }
-        btnPause.setOnClickListener{
+        binding.btnPause.setOnClickListener{
             stopTime = chronometer.base-SystemClock.elapsedRealtime()
             totalTime = chronometer.base-SystemClock.elapsedRealtime()
             chronometer.stop()
             btnPause.visibility = View.GONE
             btnStart.visibility = View.VISIBLE
-            lbAmount.text = (totalTime* 0.2).toString() + "L"
+            pauseTime = (SystemClock.elapsedRealtime()-chronometer.base)/1000
+            litros = ((SystemClock.elapsedRealtime()-chronometer.base)/1000).toString() + "L"
+            lbAmount.text = litros
+            isRunning = false
         }
-        btnStop.setOnClickListener{
+        binding.btnStop.setOnClickListener{ 
             totalTime = chronometer.base-SystemClock.elapsedRealtime()
+            chronometer.base = SystemClock.elapsedRealtime()+stopTime
+            litros = if (!isRunning){
+                ((SystemClock.elapsedRealtime()-chronometer.base)/1000).toString() + "L"
+            } else {
+                ((SystemClock.elapsedRealtime()-chronometer.base)/1000 + pauseTime).toString() + "L"
+            }
             chronometer.base = SystemClock.elapsedRealtime()
             stopTime = 0
             chronometer.stop()
             btnStart.visibility = View.VISIBLE
             btnPause.visibility = View.VISIBLE
-            lbAmount.text = (totalTime* 0.2).toString() + "L"
+
+
+            lbAmount.text = litros
         }
 
 

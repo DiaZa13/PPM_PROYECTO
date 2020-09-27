@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "260882134619",
-    "firebase_url": "https://foodforme-dom.firebaseio.com",
-    "project_id": "foodforme-dom",
-    "storage_bucket": "foodforme-dom.appspot.com"
+    "project_number": "710960071079",
+    "firebase_url": "https://ahorraagua-621f5.firebaseio.com",
+    "project_id": "ahorraagua-621f5",
+    "storage_bucket": "ahorraagua-621f5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:260882134619:android:1103306d606266dd4c317e",
+        "mobilesdk_app_id": "1:710960071079:android:a6a86ee3d63d4fc096b682",
         "android_client_info": {
           "package_name": "com.example.foodforme"
         }
       },
       "oauth_client": [
         {
-          "client_id": "260882134619-o1v0luhb2bpoab6t6i2kr480fla9k62a.apps.googleusercontent.com",
+          "client_id": "710960071079-paaiih06vl65jbmvglvbtm8ot6e1s38u.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.foodforme",
-            "certificate_hash": "279fe009aad42feba47a554a3bc5a9bc45deea4f"
+            "certificate_hash": "c3326db42ece7b9e0c2e404290dcc0821be2a9a5"
           }
         },
         {
-          "client_id": "260882134619-aik0sg9hpt868ck6m2pehe0qdvb8n028.apps.googleusercontent.com",
+          "client_id": "710960071079-cfclg5iunkofh0dkae6klbjpdokn0tnf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyALGIKQCJZxikEU3O0m96UYpxsvB-gByic"
+          "current_key": "AIzaSyCKYzEV6Jte-BlZu7OSiA0-xGrzi-JIiJY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "260882134619-aik0sg9hpt868ck6m2pehe0qdvb8n028.apps.googleusercontent.com",
+              "client_id": "710960071079-cfclg5iunkofh0dkae6klbjpdokn0tnf.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
