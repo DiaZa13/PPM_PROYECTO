@@ -1,6 +1,6 @@
 package com.example.foodforme.data
 
-data class Oferta(
+data class Record(
     val id: String = "",
     val restaurante: String = "",
     val menu: String = "",

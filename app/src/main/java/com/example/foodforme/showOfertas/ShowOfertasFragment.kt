@@ -22,7 +22,7 @@ class ShowOfertasFragment : Fragment() {
 
         // Creo mi viewmodel
         viewModel = ViewModelProvider(this).get(ShowOfertasViewModel::class.java)
-
+/*
         // Para el recycler view
         val adapter = OfertaListAdapter()
         binding.restaurantsRecycler.adapter = adapter
@@ -30,7 +30,7 @@ class ShowOfertasFragment : Fragment() {
         // binding.restaurantsRecycler.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         viewModel.datos.observe(viewLifecycleOwner, Observer {
             it.let { adapter.submitList(it) }
-        })
+        })*/
 
         return binding.root
     }

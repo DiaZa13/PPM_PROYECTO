@@ -9,13 +9,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.foodforme.R
-import com.example.foodforme.data.Fb_restaurantes
 import com.example.foodforme.databinding.FragmentRestaurantInfoBinding
 
 
 class RestaurantInfoFragment() : Fragment() {
     private lateinit var binding: FragmentRestaurantInfoBinding
-    private lateinit var viewModel: RestaurantInfoViewModel
+    //private lateinit var viewModel: RestaurantInfoViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 

@@ -4,9 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-    <variable
-        name="restaurante"
-        type="com.example.foodforme.showRestaurantes.ShowRestaurantsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
