@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.538"
-            app:srcCompat="@mipmap/tip_ducha"
+            app:srcCompat="@drawable/tip_ducha"
             app:setImage="@{tip}"/>
 
         <TextView
@@ -35,7 +35,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/advent_pro"
-            android:text="@{tip.tittle}"
+            android:text="@{tip.title}"
             android:textColor="@color/brown"
             android:textSize="24sp"
             android:textStyle="bold"

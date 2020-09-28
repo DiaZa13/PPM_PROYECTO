@@ -4,7 +4,7 @@ import java.io.Serializable
 
 class Tips (
     val name: String ="",
-    val tittle: String = "",
+    val title: String = "",
     val description: String = "",
     val reduction: String = ""
 ): Serializable
