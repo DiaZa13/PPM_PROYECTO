@@ -10,6 +10,7 @@ class NewAccountViewModel(): ViewModel() {
 
     val user = MutableLiveData<String>()
     val password = MutableLiveData<String>()
+    val name = MutableLiveData<String>()
 
     private val _newUser = MutableLiveData<Boolean>()
     val newUser: LiveData<Boolean>
@@ -21,7 +22,6 @@ class NewAccountViewModel(): ViewModel() {
 
 
     fun newAccount(){
-
 
         FirebaseAuth.getInstance()
             .createUserWithEmailAndPassword(user.value!!, password.value!!)
@@ -42,6 +42,8 @@ class NewAccountViewModel(): ViewModel() {
                    Log.w("NewAccountViewModel", it.exception)
                }
             }
+
+
     }
 
 }

@@ -39,7 +39,7 @@ class RestaurantListAdapter(val clickListener: RestaurantListener): ListAdapter<
 
 class GuestListDiffCallback: DiffUtil.ItemCallback<Tips>() {
     override fun areItemsTheSame(oldItem: Tips, newItem: Tips): Boolean {
-        return oldItem.tittle == newItem.tittle
+        return oldItem.title == newItem.title
     }
 
     override fun areContentsTheSame(oldItem: Tips, newItem: Tips): Boolean {

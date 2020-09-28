@@ -8,7 +8,7 @@ import com.example.foodforme.data.Tips
 fun ImageView.setImage(item: Tips){
     item?.let{
         setImageResource(when(item.name){
-            "Duchar" -> R.mipmap.tip_ducha
+            "Duchar" -> R.drawable.tip_ducha
             "Cocinar" -> R.drawable.tip_cocinar
             "Afeitar" -> R.drawable.tip_afeitar
             "Cepillar" -> R.drawable.tip_cepillar
