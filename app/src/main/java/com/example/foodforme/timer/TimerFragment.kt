@@ -48,7 +48,8 @@ class TimerFragment : Fragment() {
             btnPause.visibility = View.GONE
             btnStart.visibility = View.VISIBLE
             pauseTime = (SystemClock.elapsedRealtime()-chronometer.base)/1000
-            litros = ((SystemClock.elapsedRealtime()-chronometer.base)/1000).toString() + "L"
+            totalTime = (((SystemClock.elapsedRealtime()-chronometer.base)/1000)*0.2).toLong()
+            litros = (totalTime).toString() + "L"
             lbAmount.text = litros
             isRunning = false
         }
@@ -56,9 +57,11 @@ class TimerFragment : Fragment() {
             totalTime = chronometer.base-SystemClock.elapsedRealtime()
             chronometer.base = SystemClock.elapsedRealtime()+stopTime
             litros = if (!isRunning){
-                ((SystemClock.elapsedRealtime()-chronometer.base)/1000).toString() + "L"
+                totalTime = (((SystemClock.elapsedRealtime()-chronometer.base)/1000)*0.2).toLong()
+                (totalTime).toString() + "L"
             } else {
-                ((SystemClock.elapsedRealtime()-chronometer.base)/1000 + pauseTime).toString() + "L"
+                totalTime = (((SystemClock.elapsedRealtime()-chronometer.base)/1000 + pauseTime)*0.2).toLong()
+                (totalTime).toString() + "L"
             }
             chronometer.base = SystemClock.elapsedRealtime()
             stopTime = 0
