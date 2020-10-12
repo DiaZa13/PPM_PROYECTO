@@ -8,14 +8,14 @@
         android:title="Acerca de" />
 
     <item
-        android:id="@+id/showOfertasFragment"
+        android:id="@+id/rateRestaurantFragment"
         android:icon="@drawable/tip_afeitar"
-        android:title="Ofertas" />
+        android:title="El agua" />
 
     <item
-        android:id="@+id/showRestaurantsFragment"
+        android:id="@+id/restaurantFragment"
         android:icon="@mipmap/ic_about"
-        android:title="Restaurantes" />
+        android:title="Agua en Guatemala" />
 
 
 </menu>

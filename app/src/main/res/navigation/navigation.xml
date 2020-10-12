@@ -82,13 +82,6 @@
         android:id="@+id/timerFragment"
         android:name="com.example.foodforme.timer.TimerFragment"
         android:label=" "
-        tools:layout="@layout/timer_fragment" >
-        <action
-            android:id="@+id/action_timerFragment_to_rateRestaurantFragment"
-            app:destination="@id/rateRestaurantFragment" />
-        <action
-            android:id="@+id/action_timerFragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
-    </fragment>
+        tools:layout="@layout/timer_fragment" />
 
 </navigation>
