@@ -9,6 +9,7 @@ import com.example.foodforme.R
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.foodforme.databinding.FragmentShowOfertasBinding
 
 class ShowOfertasFragment : Fragment() {
@@ -22,15 +23,15 @@ class ShowOfertasFragment : Fragment() {
 
         // Creo mi viewmodel
         viewModel = ViewModelProvider(this).get(ShowOfertasViewModel::class.java)
-/*
+
         // Para el recycler view
         val adapter = OfertaListAdapter()
         binding.restaurantsRecycler.adapter = adapter
         adapter.submitList(viewModel.datos.value)
-        // binding.restaurantsRecycler.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+        binding.restaurantsRecycler.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         viewModel.datos.observe(viewLifecycleOwner, Observer {
             it.let { adapter.submitList(it) }
-        })*/
+        })
 
         return binding.root
     }

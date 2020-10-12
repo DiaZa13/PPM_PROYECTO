@@ -19,7 +19,7 @@ class ShowRestaurantsViewModel: ViewModel(){
 
     init{
         //Filtra únicamente por tipo, hay que agregar el resto de filtrado
-        val ref = FirebaseDatabase.getInstance().getReference("Tips")//Cambiar el path a la nueva base de datos
+        val ref = FirebaseDatabase.getInstance().getReference("Tips")
         ref.addValueEventListener(object:ValueEventListener{
             @SuppressLint("LongLogTag")
             override fun onDataChange(p0: DataSnapshot) {

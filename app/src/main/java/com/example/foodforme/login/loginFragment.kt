@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -14,6 +15,7 @@ import com.example.foodforme.R
 import com.example.foodforme.databinding.LoginFragmentBinding
 import com.example.foodforme.databinding.SnackbarErrorBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 
 
 class loginFragment : Fragment() {
@@ -33,6 +35,16 @@ class loginFragment : Fragment() {
         }
 
 
+        binding.btnOpen.setOnClickListener {
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            if (currentUser != null) {
+                view?.findNavController()?.navigate(R.id.action_loginFragment_to_filterFragment)
+            }else
+                makeWarning("No cuentas con sesión abierta")
+        }
+
+        //(activity as AppCompatActivity).supportActionBar?.hide()
+
         binding.btnStart.setOnClickListener {
             val user = binding.txtUser.text.toString()
             val password = binding.txtPassword.text.toString()
@@ -45,17 +57,6 @@ class loginFragment : Fragment() {
 
         }
 
-        binding.btnStart.setOnClickListener {
-            val user = binding.txtUser.text.toString()
-            val password = binding.txtPassword.text.toString()
-
-            if (user.isEmpty() || password.isEmpty())
-                makeWarning("Debes llenar todos los campos")
-            else{
-                viewModel.logIn()
-            }
-
-        }
         return binding.root
     }
 

@@ -8,19 +8,21 @@
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/colorAccent">
 
         <Chronometer
             android:id="@+id/chronometer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@color/black"
             android:textSize="60sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499" />
 
         <ImageButton
             android:id="@+id/btnStart"
@@ -29,11 +31,11 @@
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnPause"
-            app:layout_constraintHorizontal_bias="0.759"
+            app:layout_constraintHorizontal_bias="0.69"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/chronometer"
-            app:layout_constraintVertical_bias="0.025"
-            app:srcCompat="@drawable/ic_play" />
+            app:layout_constraintVertical_bias="0.074"
+            app:srcCompat="@mipmap/play" />
 
         <ImageButton
             android:id="@+id/btnStop"
@@ -42,11 +44,11 @@
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.24"
+            app:layout_constraintHorizontal_bias="0.356"
             app:layout_constraintStart_toEndOf="@+id/btnPause"
             app:layout_constraintTop_toBottomOf="@+id/chronometer"
-            app:layout_constraintVertical_bias="0.025"
-            app:srcCompat="@drawable/ic_stop" />
+            app:layout_constraintVertical_bias="0.074"
+            app:srcCompat="@mipmap/stop" />
 
         <ImageButton
             android:id="@+id/btnPause"
@@ -55,17 +57,19 @@
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/chronometer"
-            app:layout_constraintVertical_bias="0.025"
-            app:srcCompat="@drawable/ic_pause" />
+            app:layout_constraintVertical_bias="0.074"
+            app:srcCompat="@mipmap/pause" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/advent_pro"
             android:text="¿Cuánta agua gastas?"
-            android:textColor="#03A9F4"
+            android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/chronometer"
@@ -78,27 +82,29 @@
             android:id="@+id/instructions"
             android:layout_width="362dp"
             android:layout_height="213dp"
+            android:fontFamily="@font/advent_pro"
             android:gravity="center_horizontal"
-            android:text="Cuando vayas a encender el grifo, comienza el cronómetro, y cuando lo vayas a cerrar detenlo. Si lo vas a abrir y cerrar en lapsos cortos, páusalo cada vez que lo cierres y detenlo una vez termines de utilizarlo."
+            android:text="@string/instructions"
             android:textAlignment="center"
-            android:textColor="#3F51B5"
+            android:textColor="@color/black"
             android:textSize="25sp"
             app:layout_constraintBottom_toTopOf="@+id/chronometer"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title"
-            app:layout_constraintVertical_bias="0.122" />
+            app:layout_constraintVertical_bias="0.428" />
 
         <TextView
             android:id="@+id/spent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
             android:gravity="center_horizontal"
             android:text="Haz utilizado: "
             android:textAlignment="center"
-            android:textColor="#03A9F4"
-            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -111,10 +117,11 @@
             android:id="@+id/lbAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
             android:gravity="center_horizontal"
             android:textAlignment="center"
-            android:textColor="#03A9F4"
-            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

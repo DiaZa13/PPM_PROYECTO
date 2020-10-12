@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.foodforme.R
 import com.example.foodforme.databinding.FragmentFilterBinding
+import com.google.firebase.auth.FirebaseAuth
 
 
 class FilterFragment : Fragment() {
@@ -34,6 +35,11 @@ class FilterFragment : Fragment() {
             view?.findNavController()?.navigate(R.id.action_filterFragment_to_showRestaurantsFragment)
         }
 
+        binding.btnLogout.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            view?.findNavController()?.navigate(R.id.action_filterFragment_to_loginFragment)
+
+        }
         // Creo mi viewmodel
         viewModel = ViewModelProvider(this).get(FilterViewModel::class.java)
 

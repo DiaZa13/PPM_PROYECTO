@@ -1,16 +1,23 @@
 package com.example.foodforme.newAccount
 
+
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.*
+import com.google.firebase.database.FirebaseDatabase
 
 class NewAccountViewModel(): ViewModel() {
 
     val user = MutableLiveData<String>()
     val password = MutableLiveData<String>()
     val name = MutableLiveData<String>()
+
+    private var database: FirebaseDatabase = FirebaseDatabase.getInstance()
+
+
+
 
     private val _newUser = MutableLiveData<Boolean>()
     val newUser: LiveData<Boolean>
@@ -28,6 +35,8 @@ class NewAccountViewModel(): ViewModel() {
             .addOnCompleteListener{
                if(it.isSuccessful){
                     _newUser.value = true
+                   var users = database.getReference("users/" + FirebaseAuth.getInstance().currentUser!!.uid)
+                    users!!.child("name").setValue(name.value)
                }else{
                    _newUser.value = false
                    try{
@@ -45,5 +54,6 @@ class NewAccountViewModel(): ViewModel() {
 
 
     }
+
 
 }

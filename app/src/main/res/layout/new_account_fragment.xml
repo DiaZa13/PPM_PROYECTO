@@ -19,6 +19,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="414dp"
             android:layout_height="163dp"
             android:background="@color/colorPrimary"
@@ -46,12 +47,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="45dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:hint="@string/password"
             android:inputType="textPersonName|textPassword"
             android:text="@={viewModel.password}"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/password_img"
             app:layout_constraintTop_toBottomOf="@+id/txtUser" />
@@ -75,15 +77,16 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="45dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
-            android:hint= "@string/user"
+            android:hint="@string/user"
             android:inputType="textEmailAddress"
             android:text="@={viewModel.user}"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/user_img"
-            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
         <ImageView
             android:id="@+id/user_img"
@@ -91,11 +94,11 @@
             android:layout_height="40dp"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:src="@mipmap/ic_silhouette"
+            android:src="@mipmap/ic_identification"
             app:layout_constraintBottom_toBottomOf="@+id/txtUser"
             app:layout_constraintEnd_toStartOf="@+id/txtUser"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txtUser" />
+            app:layout_constraintTop_toTopOf="@id/txtUser" />
 
         <TextView
             android:id="@+id/add_info_txt"
@@ -135,6 +138,35 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+        <EditText
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:ems="10"
+            android:fontFamily="@font/advent_pro"
+            android:hint="Nombre"
+            android:text="@={viewModel.name}"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:src="@mipmap/ic_silhouette"
+            app:layout_constraintBottom_toBottomOf="@+id/txtName"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

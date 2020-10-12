@@ -1,5 +1,6 @@
 package com.example.foodforme.newAccount
 
+
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +11,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-
-
 import com.example.foodforme.R
 import com.example.foodforme.databinding.NewAccountFragmentBinding
 import com.example.foodforme.databinding.SnackbarErrorBinding
@@ -19,13 +18,9 @@ import com.google.android.material.snackbar.Snackbar
 
 class newAccountFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = newAccountFragment()
-    }
-
     private lateinit var viewModel: NewAccountViewModel
-    private lateinit var viewModelFactory: NewAccountViewModelFactory
     private lateinit var binding: NewAccountFragmentBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,10 +31,12 @@ class newAccountFragment : Fragment() {
         binding.btnNewaccount.setOnClickListener {
             val user = binding.txtUser.toString()
             val password = binding.txtPassword.toString()
-            if (user == "" || password == "") {
+            val name = binding.txtName.toString()
+            if (user == "" || password == "" || name== "" ) {
                 makeWarning("Debes llenar todos los campos")
             } else {
                 viewModel.newAccount()
+
             }
         }
 
