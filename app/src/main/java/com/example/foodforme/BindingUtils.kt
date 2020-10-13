@@ -12,7 +12,7 @@ fun ImageView.setImage(item: Tips){
             "Cocinar" -> R.drawable.tip_cocinar
             "Afeitar" -> R.drawable.tip_afeitar
             "Cepillar" -> R.drawable.tip_cepillar
-            else -> R.mipmap.logo_white
+            else -> R.mipmap.urda_blogo
         })
     }
 }

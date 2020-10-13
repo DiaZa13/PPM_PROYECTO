@@ -75,19 +75,22 @@
             app:layout_constraintBottom_toBottomOf="@id/tip_icon"
             app:layout_constraintStart_toEndOf="@+id/tip_icon"
             app:layout_constraintTop_toBottomOf="@+id/tip_description"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/tip_reduction"
             android:layout_width="151dp"
             android:layout_height="27dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/advent_pro"
             android:text="@{tip.reduction}"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/tip_icon"
             app:layout_constraintStart_toEndOf="@+id/tip_message"
-            tools:text="30 mil litros al año"/>
+            app:layout_constraintTop_toBottomOf="@+id/tip_description"
+            tools:text="30 mil litros al año" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -9,12 +9,12 @@
 
     <item
         android:id="@+id/rateRestaurantFragment"
-        android:icon="@drawable/tip_afeitar"
+        android:icon="@mipmap/water"
         android:title="El agua" />
 
     <item
         android:id="@+id/restaurantFragment"
-        android:icon="@mipmap/ic_about"
+        android:icon="@mipmap/map_gt"
         android:title="Agua en Guatemala" />
 
 

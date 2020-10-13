@@ -24,4 +24,8 @@
     <string name="History">Historial de consumo de agua</string>
     <string name="Tips">Tips para la reducción de consumo de agua</string>
     <string name="instructions">Cuando enciendas el grifo, inicia el cronómetro, y detenlo cuando cierres el grifo. Si vas a utiliza el grifo en lapsos cortos (abriendo y cerrando continuamente), páusalo cada vez que lo cierres y detenlo una vez termines de utilizarlo.</string>
+    <string name="Aguagt">A abundancia de contaminación falta de agua</string>
+    <string name="datos1"> Al año, se producen 97 mil millones de metros cúbicos de agua, de la cual únicamente se utiiza el 10% ya que el resto se encuentra contaminado.</string>
+    <string name="datos2">Guatemala cuenta con agua abundante para satisfacer las necesidades básicas de las personas, el ambiente y la productividad económica. Una persona, en promedio, debería de gastar al rededor de 150 litros de agua al día, sin embargo, los estudios han demostrados, que solo en el área metropolitana, se utilizan hasta 400 litros por persona</string>
+    <string name="datos3">Guatemala es un país que cuenta con abundancia de agua, sin embargo la mayoría de esta se encuentra contaminada gracias a la basura y las aguas residuales que se desechan en las fuentes hídricas.</string>
 </resources>
